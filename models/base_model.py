@@ -7,7 +7,7 @@ class BaseModel:
     """class base
     """
 
-    def __init__(self):
+    def __init__(self, name=None, my_number=0):
         """Initializing public attributes in the class
         id = contains unique identifier
         created_at = date time of object
@@ -16,6 +16,10 @@ class BaseModel:
         self.id = str(uuid.uuid4())
         self.created_at = datetime.now()
         self.updated_at = datetime.now()
+        if name:
+            self.name = name
+        if my_number:
+            self.my_number = my_number
 
     def __str__(self):
         """
@@ -36,13 +40,13 @@ class BaseModel:
             a_dict: containg all information of the class
         """
         a_dict = {}
-        n_dict = dict(self.__dict__)
-        for key in n_dict:
+        for key in self.__dict__:
             if key == 'id':
                 a_dict[key] = self.id
             elif key == 'created_at':
                 a_dict[key] = self.created_at.isoformat()
             elif key == 'updated_at':
                 a_dict[key] = self.updated_at.isoformat()
+            
         a_dict["__class__"] = type(self).__name__
         return a_dict
