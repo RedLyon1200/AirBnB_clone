@@ -5,6 +5,7 @@ from datetime import datetime
 import json
 import models
 
+
 class BaseModel:
     """class base
     """
@@ -20,7 +21,8 @@ class BaseModel:
                 if key == 'id':
                     self.id = value
                 elif key == 'created_at' or key == 'updated_at':
-                    self.__dict__[key] = datetime.strptime(value, "%Y-%m-%dT%H:%M:%S.%f")
+                    self.__dict__[key] = datetime.strptime(
+                        value, "%Y-%m-%dT%H:%M:%S.%f")
                 else:
                     if key == "__class__":
                         setattr(self, value, kwargs[key])
