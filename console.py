@@ -15,7 +15,7 @@ class HBNBCommand(cmd.Cmd):
     classes = ['BaseModel']
     errors = {
         'empty': '** class name missing **',
-        'no_exist': '** class doesn\'t exist **',
+        'no_cls': '** class doesn\'t exist **',
         'no_id': '** instance id missing **',
         'id_not_found': '** no instance found **'
     }
@@ -29,36 +29,63 @@ class HBNBCommand(cmd.Cmd):
         return True
 
     def do_create(self, arg):
+        """[Create a specified model]
+        """
         args = arg.split()
 
         if len(args) < 1:
             print(self.errors['empty'])
         elif args[0] not in self.classes:
-            print(self.errors['no_exist'])
+            print(self.errors['no_cls'])
         else:
             if args[0] == 'BaseModel':
                 obj = models.base_model.BaseModel()
 
-        obj.save()
-        print('{}'.format(obj.id))
+                obj.save()
+                print('{}'.format(obj.id))
 
     def do_show(self, arg):
+        """[Show model]"""
         args = arg.split()
 
-        if len(args) < 1:
-            print(self.errors['empty'])
-        elif args[0] not in self.classes:
-            print(self.errors['no_exist'])
-        elif len(args) < 2:
-            print(self.errors['no_id'])
-        else:
-            models.storage.reload()
+        if self.validate_args(args):
             stored_dict = models.storage.all()
             key = args[0] + '.' + args[1]
             if key not in stored_dict:
                 print(self.errors['id_not_found'])
             else:
                 print(stored_dict[key])
+
+    def do_destroy(self, arg):
+        """[Destroy model]
+        """
+        args = arg.split()
+
+        if self.validate_args(args):
+            stored_dict = models.storage.all()
+            key = args[0] + '.' + args[1]
+            if key not in stored_dict:
+                print(self.errors['id_not_found'])
+            else:
+                del stored_dict[key]
+                models.storage.save()
+
+    def validate_args(self, args):
+        """[Validate arguments]
+        """
+        if len(args) < 1:
+            print(self.errors['empty'])
+        elif args[0] not in self.classes:
+            print(self.errors['no_cls'])
+        elif len(args) < 2:
+            print(self.errors['no_id'])
+        else:
+            return True
+
+    def emptyline(self):
+        """[pass if command is empty]
+        """
+        pass
 
 
 if __name__ == "__main__":
