@@ -9,9 +9,6 @@ from models import classes
 
 class HBNBCommand(cmd.Cmd):
     """[This is the htbn cls]
-
-    Args:
-        cmd ([Cmd])
     """
     prompt = '(hbtn) '
     errors = {
@@ -24,16 +21,34 @@ class HBNBCommand(cmd.Cmd):
     }
 
     def do_quit(self, arg):
-        """[Quit command to exit the console]"""
+        """quit: quit
+    Quit the console.
+
+    Quits the console with not status.
+
+    Exit Status:
+    Returns true whenever the quit signal is detected."""
         return True
 
     def do_EOF(self, arg):
-        """[Exit the console]"""
+        """EOF: ^C
+    Exit the console.
+
+    Exits the console with not status.
+
+    Exit Status:
+    Returns true each time the keyboard interrupt signal is detected."""
         return True
 
+    """ def do_help(self, arg):
+        print(arg) """
+
     def do_create(self, arg):
-        """[Create a specified model]
-        """
+        """create: create CLASS_NAME
+    Instantiate classes
+
+    Creates a new instance of CLASS_NAME, saves it (to the JSON file) and \
+print the id. """
         args = arg.split()
 
         if len(args) == 0:
@@ -47,34 +62,43 @@ class HBNBCommand(cmd.Cmd):
             obj.save()
 
     def do_show(self, arg):
-        """[Show model]"""
+        """show: show CLASS_NAME ID
+    Show classes
+
+    Prints the string representation of an instance based on the CLASS_NAME \
+and ID."""
         args = arg.split()
 
         if self.validate_args(args):
             stored_dict = models.storage.all()
             key = args[0] + '.' + args[1]
-            if key not in stored_dict:
-                print(self.errors['id_not_found'])
-            else:
+            if self.validate_id(stored_dict, key):
                 print(stored_dict[key])
 
     def do_destroy(self, arg):
-        """[Destroy model]
-        """
+        """destroy: destroy CLASS_NAME ID
+    Remove classes
+
+    Deletes an instance based on the CLASS_NAME and ID (save the change into \
+the JSON file)."""
         args = arg.split()
 
         if self.validate_args(args):
             stored_dict = models.storage.all()
             key = args[0] + '.' + args[1]
-            if key not in stored_dict:
-                print(self.errors['id_not_found'])
-            else:
+            if self.validate_id(stored_dict, key):
                 del stored_dict[key]
                 models.storage.save()
 
     def do_all(self, arg):
-        """[Print all instances]
-        """
+        """all: all [class_name]
+    See classes
+
+    Prints all string representation of all instances based or not on the \
+[class_name].
+
+    Options:
+      class_name    shows only the information of said class."""
         args = arg.split()
         instances = []
 
@@ -91,6 +115,11 @@ class HBNBCommand(cmd.Cmd):
             print(self.errors['no_cls'])
 
     def do_update(self, arg):
+        """update: update CLASS_NAME ID ATTR_NAME ATTR_VALUE
+    Update classes
+
+    Updates an instance based on the CLASS_NAME and ID by adding or updating \
+the ATTR_NAME (the change is saved in the JSON file)."""
         args = arg.split()
 
         if self.validate_args(args, update=True):
@@ -99,38 +128,61 @@ class HBNBCommand(cmd.Cmd):
 
             stored_dict = models.storage.all()
             key = args[0] + '.' + args[1]
-            if key not in stored_dict:
-                print(self.errors['id_not_found'])
-            else:
+            if self.validate_id(stored_dict, key):
                 setattr(stored_dict[key], attr, value)
                 print(stored_dict[key])
                 models.storage.save()
 
+    def validate_id(self, stored_dict, id):
+        """validate_id: validate_id(STORED_DICT, ID)
+    Review id
+
+    Validate if the STORED_DICT contains the ID.
+
+    Exit Status:
+    Returns true if ARGS is correct, otherwise returns False."""
+
+        if id in stored_dict:
+            return True
+        else:
+            print(self.errors['id_not_found'])
+            return False
+
     def validate_args(self, args, update=False):
-        """[Validate arguments]
-        """
+        """validate_args: validate_args(ARGS, [update])
+    Check arguments
+
+    Validates the amount and type of ARGS sent and optionally, check or not \
+the validations of the [update].
+
+    Exit Status:
+    Returns true if ARGS is correct, otherwise returns False."""
         if len(args) < 1:
             print(self.errors['empty'])
         elif args[0] not in classes:
             print(self.errors['no_cls'])
         elif len(args) < 2:
             print(self.errors['no_id'])
-        else:
-            if update:
-                if len(args) < 3:
-                    print(self.errors['no_attr'])
-                elif len(args) < 4:
-                    print(self.errors['no_val'])
-                else:
-                    return True
+        elif update:
+            if len(args) < 3:
+                print(self.errors['no_attr'])
+            elif len(args) < 4:
+                print(self.errors['no_val'])
             else:
                 return True
+        else:
+            return True
+
+        return False
 
     def emptyline(self):
-        """[pass if command is empty]
-        """
+        """emptyline:
+    empty line
+
+    if an empty line is sent through ENTER the program does nothing."""
         pass
 
 
 if __name__ == "__main__":
+    """main entry"""
     HBNBCommand().cmdloop()
