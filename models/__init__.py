@@ -9,11 +9,10 @@ from models.engine.file_storage import FileStorage
 from models.base_model import BaseModel
 from models.user import User
 
-
 classes = {
     'BaseModel': BaseModel,
-    'User': User,
     'State': State,
+    'User': User,
     'City': City,
     'Amenity': Amenity,
     'Place': Place,
