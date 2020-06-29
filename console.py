@@ -5,7 +5,7 @@ import cmd
 import models
 from models.base_model import BaseModel
 from models import classes
-
+import shlex
 
 class HBNBCommand(cmd.Cmd):
     """[This is the htbn cls]
@@ -28,7 +28,6 @@ class HBNBCommand(cmd.Cmd):
 
     Exit Status:
     Returns true whenever the quit signal is detected."""
-        print('QUIT')
         return True
 
     def do_EOF(self, arg):
@@ -121,12 +120,14 @@ the JSON file)."""
 
     Updates an instance based on the CLASS_NAME and ID by adding or updating \
 the ATTR_NAME (the change is saved in the JSON file)."""
-        args = arg.split()
+        args = shlex.split(arg)
 
         if self.validate_args(args, update=True):
             attr = args[2]
             value = args[3]
 
+            if attr in ['id', 'created_at', 'update_at']:
+                return
             stored_dict = models.storage.all()
             key = args[0] + '.' + args[1]
             if self.validate_id(stored_dict, key):
