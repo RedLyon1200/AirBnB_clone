@@ -11,7 +11,8 @@ from models.place import Place
 from models.review import Review
 from models.state import State
 from models.user import User
-import os
+import pep8
+from os import remove
 import unittest
 
 
@@ -26,7 +27,7 @@ class TestFileStorage(unittest.TestCase):
     def tearDown(self):
         """delete JSON file"""
         try:
-            os.remove("file.json")
+            remove("file.json")
         except FileNotFoundError:
             pass
 
@@ -77,7 +78,7 @@ class TestBaseModelFileStorage(unittest.TestCase):
         """delete instance"""
         del self.b1
         try:
-            os.remove("file.json")
+            remove("file.json")
         except FileNotFoundError:
             pass
 
@@ -108,7 +109,7 @@ class TestUserFileStorage(unittest.TestCase):
         """delete instance"""
         del self.u1
         try:
-            os.remove("file.json")
+            remove("file.json")
         except FileNotFoundError:
             pass
 
@@ -136,7 +137,7 @@ class TestStateFileStorage(unittest.TestCase):
         """delete instance"""
         del self.s1
         try:
-            os.remove("file.json")
+            remove("file.json")
         except FileNotFoundError:
             pass
 
@@ -169,7 +170,7 @@ class TestCityFileStorage(unittest.TestCase):
         """delete instance"""
         del self.c1
         try:
-            os.remove("file.json")
+            remove("file.json")
         except FileNotFoundError:
             pass
 
@@ -201,7 +202,7 @@ class TestAmenityFileStorage(unittest.TestCase):
         """delete instance"""
         del self.a1
         try:
-            os.remove("file.json")
+            remove("file.json")
         except FileNotFoundError:
             pass
 
@@ -234,7 +235,7 @@ class TestPlaceFileStorage(unittest.TestCase):
         """delete instance"""
         del self.p1
         try:
-            os.remove("file.json")
+            remove("file.json")
         except FileNotFoundError:
             pass
 
@@ -267,7 +268,7 @@ class TestReviewFileStorage(unittest.TestCase):
         """delete instance"""
         del self.r1
         try:
-            os.remove("file.json")
+            remove("file.json")
         except FileNotFoundError:
             pass
 
