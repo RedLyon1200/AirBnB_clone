@@ -21,6 +21,15 @@ class TestUser(unittest.TestCase):
         self.u1.email = "airbnb2@holbertonshool.com"
         self.u1.password = "root"
 
+    @classmethod
+    def tearDown(cls):
+        """delete instance"""
+        del cls.u1
+        try:
+            os.remove("file.json")
+        except FileNotFoundError:
+            pass
+
     def test_pep8(self):
         """test pep8"""
         fchecker = pep8.Checker('models/user.py', show_source=True)
@@ -67,3 +76,7 @@ class TestUser(unittest.TestCase):
     def test_to_dict(self):
         """Test to_dict"""
         self.assertEqual('to_dict' in dir(self.u1), True)
+
+if __name__ == '__main__':
+    unittest.main()
+    
