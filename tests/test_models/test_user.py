@@ -14,19 +14,17 @@ class TestUser(unittest.TestCase):
             unittest ([type]): [description]
     """
 
-    @classmethod
-    def setUp(cls):
+    def setUp(self):
         """setup instance"""
-        cls.u1 = User()
-        cls.u1.first_name = "Betty"
-        cls.u1.last_name = "Holberton"
-        cls.u1.email = "airbnb@holbertonshool.com"
-        cls.u1.password = "root"
+        self.u1 = User()
+        self.u1.first_name = "Betty"
+        self.u1.last_name = "Holberton"
+        self.u1.email = "airbnb@holbertonshool.com"
+        self.u1.password = "root"
 
-    @classmethod
-    def tearDown(cls):
+    def tearDown(self):
         """delete instance"""
-        del cls.u1
+        del self.u1
         try:
             os.remove("file.json")
         except FileNotFoundError:
