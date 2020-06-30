@@ -7,6 +7,7 @@ from models.base_model import BaseModel
 from models import classes
 import shlex
 
+
 class HBNBCommand(cmd.Cmd):
     """[This is the htbn cls]
     """
