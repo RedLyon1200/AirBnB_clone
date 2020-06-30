@@ -5,6 +5,7 @@ import pep8
 import models
 from models.base_model import BaseModel
 from models.state import State
+import os
 
 
 class TestState(unittest.TestCase):
@@ -20,7 +21,7 @@ class TestState(unittest.TestCase):
 
     def tearDown(self):
         """delete instance"""
-        del self.u1
+        del self.s1
         try:
             os.remove("file.json")
         except FileNotFoundError:

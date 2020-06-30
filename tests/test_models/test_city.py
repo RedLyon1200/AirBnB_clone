@@ -5,6 +5,7 @@ import pep8
 import models
 from models.base_model import BaseModel
 from models.city import City
+import os
 
 
 class TestCity(unittest.TestCase):
@@ -21,7 +22,7 @@ class TestCity(unittest.TestCase):
 
     def tearDown(self):
         """delete instance"""
-        del self.u1
+        del self.c1
         try:
             os.remove("file.json")
         except FileNotFoundError:

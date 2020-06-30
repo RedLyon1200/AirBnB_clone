@@ -5,7 +5,7 @@ import pep8
 import models
 from models.base_model import BaseModel
 from models.amenity import Amenity
-
+import os
 
 class TestAmenity(unittest.TestCase):
     """
@@ -20,7 +20,7 @@ class TestAmenity(unittest.TestCase):
 
     def tearDown(self):
         """delete instance"""
-        del self.u1
+        del self.a1
         try:
             os.remove("file.json")
         except FileNotFoundError:

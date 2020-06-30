@@ -5,6 +5,7 @@ import pep8
 import models
 from models.base_model import BaseModel
 from models.user import User
+import os
 
 
 class TestUser(unittest.TestCase):
