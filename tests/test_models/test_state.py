@@ -6,6 +6,7 @@ from models.state import State
 import os
 import pep8
 import unittest
+from time import sleep
 
 
 class TestState(unittest.TestCase):
@@ -60,6 +61,7 @@ class TestState(unittest.TestCase):
     def test_save(self):
         """Test save"""
         before_update = self.s1.updated_at
+        sleep(1.5)
         self.s1.save()
 
         self.assertNotEqual(self.s1.updated_at, before_update)
