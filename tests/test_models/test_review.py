@@ -1,11 +1,11 @@
 #!/usr/bin/python3
 """Unit test for class Amenity"""
-import unittest
-import pep8
 import models
 from models.base_model import BaseModel
 from models.review import Review
 import os
+import pep8
+import unittest
 
 
 class TestReview(unittest.TestCase):
@@ -18,7 +18,7 @@ class TestReview(unittest.TestCase):
         """Reload object"""
         self.r1 = Review()
         self.r1.name = "Deiwin"
-    
+
     def tearDown(self):
         """delete instance"""
         del self.r1
@@ -26,7 +26,6 @@ class TestReview(unittest.TestCase):
             os.remove("file.json")
         except FileNotFoundError:
             pass
-
 
     def test_pep8(self):
         """test pep8"""
@@ -68,3 +67,7 @@ class TestReview(unittest.TestCase):
     def test_to_dict(self):
         """Test to_dict"""
         self.assertEqual('to_dict' in dir(self.r1), True)
+
+
+if __name__ == '__main__':
+    unittest.main()

@@ -1,9 +1,9 @@
 #!/usr/bin/python3
 """This is class Base Model"""
-import uuid
 from datetime import datetime
 import json
 import models
+import uuid
 
 
 class BaseModel:

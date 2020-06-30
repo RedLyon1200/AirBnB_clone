@@ -1,12 +1,12 @@
 #!/usr/bin/python3
 """Unit test for class BaseModel"""
-import unittest
-import pep8
-import models
-from models.base_model import BaseModel
+from contextlib import redirect_stdout
 from datetime import datetime
 import io
-from contextlib import redirect_stdout
+import models
+from models.base_model import BaseModel
+import pep8
+import unittest
 
 
 class TestBaseModel(unittest.TestCase):
@@ -98,3 +98,7 @@ class TestBaseModel(unittest.TestCase):
         self.assertIsInstance(b1_dict['updated_at'], str)
         self.assertIsInstance(b1_dict['name'], str)
         self.assertIsInstance(b1_dict['my_number'], int)
+
+
+if __name__ == '__main__':
+    unittest.main()
