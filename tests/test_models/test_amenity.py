@@ -18,6 +18,14 @@ class TestAmenity(unittest.TestCase):
         self.a1 = Amenity()
         self.a1.name = "Deiwin"
 
+    def tearDown(self):
+        """delete instance"""
+        del self.u1
+        try:
+            os.remove("file.json")
+        except FileNotFoundError:
+            pass
+
     def test_pep8(self):
         """test pep8"""
         fchecker = pep8.Checker('models/amenity.py', show_source=True)

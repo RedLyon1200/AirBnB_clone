@@ -28,6 +28,14 @@ class TestPlace(unittest.TestCase):
         self.p1.longitude = 108.9
         self.p1.amenity_ids = ["56deq1626", "1727132dhsad"]
 
+    def tearDown(self):
+        """delete instance"""
+        del self.u1
+        try:
+            os.remove("file.json")
+        except FileNotFoundError:
+            pass
+
     def test_pep8(self):
         """test pep8"""
         fchecker = pep8.Checker('models/amenity.py', show_source=True)

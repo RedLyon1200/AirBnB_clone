@@ -18,6 +18,14 @@ class TestState(unittest.TestCase):
         self.s1 = State()
         self.s1.name = "Marlon"
 
+    def tearDown(self):
+        """delete instance"""
+        del self.u1
+        try:
+            os.remove("file.json")
+        except FileNotFoundError:
+            pass
+
     def test_pep8(self):
         """test pep8"""
         fchecker = pep8.Checker('models/state.py', show_source=True)
@@ -58,3 +66,6 @@ class TestState(unittest.TestCase):
     def test_to_dict(self):
         """Test to_dict"""
         self.assertEqual('to_dict' in dir(self.s1), True)
+
+if __name__ == '__main__':
+    unittest.main()

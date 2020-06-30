@@ -19,6 +19,14 @@ class TestCity(unittest.TestCase):
         self.c1.name = "Julien"
         self.c1.state = "Antioquia"
 
+    def tearDown(self):
+        """delete instance"""
+        del self.u1
+        try:
+            os.remove("file.json")
+        except FileNotFoundError:
+            pass
+
     def test_pep8(self):
         """test pep8"""
         fchecker = pep8.Checker('models/city.py', show_source=True)
