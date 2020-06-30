@@ -63,11 +63,6 @@ class TestState(unittest.TestCase):
         self.assertEqual(my_new_user.updated_at, self.s1.updated_at)
         self.assertIsNot(self.s1, my_new_user)
 
-
-    def test_attr_type(self):
-        """Test attr_type"""
-        self.assertIsInstance(self.s1.name, str)
-
     def test_save(self):
         """Test save"""
         self.s1.save()

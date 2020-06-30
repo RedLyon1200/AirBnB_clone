@@ -16,10 +16,6 @@ from models.engine.file_storage import FileStorage
 
 
 class TestCity(unittest.TestCase):
-    """
-    Args:
-            unittest ([type]): [description]
-    """
 
     def setUp(self):
         """Reload object"""
@@ -47,8 +43,7 @@ class TestCity(unittest.TestCase):
 
     def test_instance(self):
         """Test instance"""
-        self.assertIsInstance(self.c1, City)
-        self.assertIsInstance(self.c1, BaseModel)
+        self.assertIsInstance(self.c1, Cit
 
     def test_is_subclass(self):
         """Test is_subclass"""
@@ -64,11 +59,6 @@ class TestCity(unittest.TestCase):
         self.assertEqual(my_new_user.updated_at, self.c1.updated_at)
         self.assertIsNot(self.c1, my_new_user)
 
-
-    def test_attr_type(self):
-        """Test attr_type"""
-        self.assertIsInstance(self.c1.name, str)
-        self.assertIsInstance(self.c1.state, str)
 
     def test_save(self):
         """Test save"""

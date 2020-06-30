@@ -16,10 +16,6 @@ from models.engine.file_storage import FileStorage
 
 
 class TestPlace(unittest.TestCase):
-    """
-    Args:
-            unittest ([type]): [description]
-    """
 
     def setUp(self):
         """Reload object"""
@@ -72,21 +68,6 @@ class TestPlace(unittest.TestCase):
         self.assertEqual(my_new_user.created_at, self.p1.created_at)
         self.assertEqual(my_new_user.updated_at, self.p1.updated_at)
         self.assertIsNot(self.p1, my_new_user)
-
-
-    def test_attr_type(self):
-        """Test attr_type"""
-        self.assertIsInstance(self.p1.city_id, str)
-        self.assertIsInstance(self.p1.user_id, str)
-        self.assertIsInstance(self.p1.name, str)
-        self.assertIsInstance(self.p1.description, str)
-        self.assertIsInstance(self.p1.number_rooms, int)
-        self.assertIsInstance(self.p1.number_bathrooms, int)
-        self.assertIsInstance(self.p1.max_guest, int)
-        self.assertIsInstance(self.p1.price_by_night, int)
-        self.assertIsInstance(self.p1.latitude, float)
-        self.assertIsInstance(self.p1.longitude, float)
-        self.assertIsInstance(self.p1.amenity_ids, list)
 
     def test_save(self):
         """Test save"""

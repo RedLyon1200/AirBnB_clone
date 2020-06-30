@@ -59,10 +59,6 @@ class TestAmenity(unittest.TestCase):
         self.assertIsNot(self.a1, my_new_user)
 
 
-    def test_attr_type(self):
-        """Test attr_type"""
-        self.assertIsInstance(self.a1.name, str)
-
     def test_save(self):
         """Test save"""
         self.a1.save()
