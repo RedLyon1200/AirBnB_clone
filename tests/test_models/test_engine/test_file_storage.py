@@ -30,6 +30,13 @@ class TestFileStorage(unittest.TestCase):
         except FileNotFoundError:
             pass
 
+    def test_pep8(self):
+        """test pep8"""
+        fchecker = pep8.Checker(
+            'models/engine/file_storage.py', show_source=True)
+        file_errors = fchecker.check_all()
+        print("Found %s errors (and warnings)" % file_errors)
+
     def test_objects(self):
         """Type of __objects"""
         self.assertTrue(isinstance(self.objects, dict))
