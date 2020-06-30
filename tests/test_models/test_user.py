@@ -3,8 +3,8 @@
 import models
 from models.base_model import BaseModel
 from models.user import User
-import os
 import pep8
+from os import remove
 import unittest
 
 
@@ -26,7 +26,7 @@ class TestUser(unittest.TestCase):
         """delete instance"""
         del self.u1
         try:
-            os.remove("file.json")
+            remove("file.json")
         except FileNotFoundError:
             pass
 
