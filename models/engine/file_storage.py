@@ -47,12 +47,8 @@ class FileStorage:
         if path.exists(self.__file_path):
             with open(self.__file_path, mode="r",
                       encoding="utf-8") as a_file:
-                try:
                     a_dict = json.load(a_file)
                     for key, value in a_dict.items():
                         if value.get('__class__') in models.classes:
                             methd = value.get('__class__')
                             self.__objects[key] = eval(str(methd))(a_dict[key])
-                except Exception as ex:
-                    print('An error occurred:\n\n{}'.format(ex))
-                    exit(-1)
