@@ -21,10 +21,10 @@ class TestUser(unittest.TestCase):
         self.u1.email = "airbnb2@holbertonshool.com"
         self.u1.password = "root"
 
-    @classmethod
-    def tearDown(cls):
+ 
+    def tearDown(self):
         """delete instance"""
-        del cls.u1
+        del self.u1
         try:
             os.remove("file.json")
         except FileNotFoundError:
@@ -79,4 +79,3 @@ class TestUser(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
-    
