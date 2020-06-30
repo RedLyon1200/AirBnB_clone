@@ -37,6 +37,14 @@ class TestFileStorage(unittest.TestCase):
             'models/engine/file_storage.py', show_source=True)
         file_errors = fchecker.check_all()
         print("Found %s errors (and warnings)" % file_errors)
+    
+    def test_docstring(self):
+        """test doc in the file"""
+        self.assertIsNotNone(FileStorage.__doc__)
+        self.assertIsNotNone(FileStorage.all.__doc__)
+        self.assertIsNotNone(FileStorage.new.__doc__)
+        self.assertIsNotNone(FileStorage.save.__doc__)
+        self.assertIsNotNone(FileStorage.reload.__doc__)
 
     def test_objects(self):
         """Type of __objects"""
