@@ -4,7 +4,7 @@ import models
 from models.base_model import BaseModel
 from models.user import User
 import pep8
-from os import remove
+import os
 import unittest
 
 
@@ -14,19 +14,21 @@ class TestUser(unittest.TestCase):
             unittest ([type]): [description]
     """
 
-    def setUp(self):
-        """Reload object"""
-        self.u1 = User()
-        self.u1.first_name = "Betty"
-        self.u1.last_name = "Holberton"
-        self.u1.email = "airbnb2@holbertonshool.com"
-        self.u1.password = "root"
+    @classmethod
+    def setUp(cls):
+        """setup instance"""
+        cls.u1 = User()
+        cls.u1.first_name = "Betty"
+        cls.u1.last_name = "Holberton"
+        cls.u1.email = "airbnb@holbertonshool.com"
+        cls.u1.password = "root"
 
-    def tearDown(self):
+    @classmethod
+    def tearDown(cls):
         """delete instance"""
-        del self.u1
+        del cls.u1
         try:
-            remove("file.json")
+            os.remove("file.json")
         except FileNotFoundError:
             pass
 
