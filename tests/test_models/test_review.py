@@ -6,6 +6,7 @@ from models.review import Review
 import os
 import pep8
 import unittest
+from time import sleep
 
 
 class TestReview(unittest.TestCase):
@@ -60,6 +61,7 @@ class TestReview(unittest.TestCase):
     def test_save(self):
         """Test save"""
         before_update = self.r1.updated_at
+        sleep(1.5)
         self.r1.save()
 
         self.assertNotEqual(self.r1.updated_at, before_update)
