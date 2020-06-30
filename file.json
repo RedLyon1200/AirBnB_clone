@@ -1,0 +1,1359 @@
+{
+    "BaseModel.f4553182-8a0d-4d51-a9d1-d8dcfa681ced": {
+        "updated_at": "2020-06-30T16:31:14.469411",
+        "id": "f4553182-8a0d-4d51-a9d1-d8dcfa681ced",
+        "__class__": "BaseModel",
+        "created_at": "2020-06-30T16:31:14.469384"
+    },
+    "City.5b328401-2c81-4a6d-aaf4-cfa115751f69": {
+        "updated_at": "2020-06-30T16:31:35.723820",
+        "name": "Julien",
+        "id": "5b328401-2c81-4a6d-aaf4-cfa115751f69",
+        "created_at": "2020-06-30T16:31:35.723815",
+        "state": "Antioquia",
+        "__class__": "City"
+    },
+    "User.9f4ae4b5-f347-4b15-9cb2-d7af09ed90a8": {
+        "updated_at": "2020-06-30T16:30:47.389661",
+        "first_name": "Betty",
+        "last_name": "Holberton",
+        "password": "root",
+        "id": "9f4ae4b5-f347-4b15-9cb2-d7af09ed90a8",
+        "created_at": "2020-06-30T16:30:47.389656",
+        "email": "airbnb2@holbertonshool.com",
+        "__class__": "User"
+    },
+    "City.5a136939-0b6a-4903-9bbe-ae874f316a1c": {
+        "updated_at": "2020-06-30T16:31:14.529975",
+        "id": "5a136939-0b6a-4903-9bbe-ae874f316a1c",
+        "name": "Julien",
+        "created_at": "2020-06-30T16:31:14.529970",
+        "state": "Antioquia",
+        "__class__": "City"
+    },
+    "Amenity.78411fa0-0d88-45c6-8752-cd0d36ae5a9a": {
+        "updated_at": "2020-06-30T16:31:14.548564",
+        "name": "Deiwin",
+        "__class__": "Amenity",
+        "id": "78411fa0-0d88-45c6-8752-cd0d36ae5a9a",
+        "created_at": "2020-06-30T16:31:14.548554"
+    },
+    "BaseModel.901a1331-e3df-4fe3-899c-f146452dc2dd": {
+        "updated_at": "2020-06-30T16:31:14.503416",
+        "id": "901a1331-e3df-4fe3-899c-f146452dc2dd",
+        "__class__": "BaseModel",
+        "created_at": "2020-06-30T16:31:14.503413"
+    },
+    "Review.164d4f19-b5e1-4537-af01-247f9fc9d6a2": {
+        "updated_at": "2020-06-30T16:31:14.491556",
+        "id": "164d4f19-b5e1-4537-af01-247f9fc9d6a2",
+        "__class__": "Review",
+        "created_at": "2020-06-30T16:31:14.491503"
+    },
+    "City.2006327b-fc97-4c97-a86a-7274d5d1f8ba": {
+        "updated_at": "2020-06-30T16:30:47.356820",
+        "id": "2006327b-fc97-4c97-a86a-7274d5d1f8ba",
+        "name": "Julien",
+        "created_at": "2020-06-30T16:30:47.356815",
+        "state": "Antioquia",
+        "__class__": "City"
+    },
+    "User.244f30e6-c5dd-4d04-9066-f8b9f5f32a5d": {
+        "updated_at": "2020-06-30T16:30:47.389013",
+        "first_name": "Betty",
+        "last_name": "Holberton",
+        "password": "root",
+        "id": "244f30e6-c5dd-4d04-9066-f8b9f5f32a5d",
+        "created_at": "2020-06-30T16:30:47.389004",
+        "email": "airbnb2@holbertonshool.com",
+        "__class__": "User"
+    },
+    "User.0e13b5e8-80a4-43b9-a7d6-24a51802203d": {
+        "updated_at": "2020-06-30T16:31:35.769827",
+        "password": "root",
+        "__class__": "User",
+        "first_name": "Betty",
+        "id": "0e13b5e8-80a4-43b9-a7d6-24a51802203d",
+        "created_at": "2020-06-30T16:31:35.769608",
+        "email": "airbnb2@holbertonshool.com",
+        "last_name": "Holberton"
+    },
+    "BaseModel.019a7520-6f00-4206-a3e3-0ffe520f562e": {
+        "updated_at": "2020-06-30T16:30:47.333835",
+        "id": "019a7520-6f00-4206-a3e3-0ffe520f562e",
+        "__class__": "BaseModel",
+        "created_at": "2020-06-30T16:30:47.333829"
+    },
+    "City.35bcb8a2-3d53-4e37-9c67-0c32bf06b4ef": {
+        "updated_at": "2020-06-30T16:31:14.475218",
+        "id": "35bcb8a2-3d53-4e37-9c67-0c32bf06b4ef",
+        "__class__": "City",
+        "created_at": "2020-06-30T16:31:14.475141"
+    },
+    "State.130151a2-75bd-4688-a4cd-6998b455610e": {
+        "updated_at": "2020-06-30T16:30:47.332164",
+        "created_at": "2020-06-30T16:30:47.332151",
+        "__class__": "State",
+        "id": "130151a2-75bd-4688-a4cd-6998b455610e"
+    },
+    "BaseModel.49f206a0-8e8d-4a9f-bee7-b8acbe934692": {
+        "updated_at": "2020-06-30T16:31:14.522747",
+        "id": "49f206a0-8e8d-4a9f-bee7-b8acbe934692",
+        "__class__": "BaseModel",
+        "created_at": "2020-06-30T16:31:14.522684"
+    },
+    "BaseModel.422f6de3-54b7-4116-b6b9-7addd5c9a9a3": {
+        "updated_at": "2020-06-30T16:31:14.526428",
+        "id": "422f6de3-54b7-4116-b6b9-7addd5c9a9a3",
+        "__class__": "BaseModel",
+        "created_at": "2020-06-30T16:31:14.526412"
+    },
+    "BaseModel.cdb6d0e6-2343-4d61-8bf3-f27b25d9df8e": {
+        "updated_at": "2020-06-30T16:30:47.334762",
+        "id": "cdb6d0e6-2343-4d61-8bf3-f27b25d9df8e",
+        "__class__": "BaseModel",
+        "created_at": "2020-06-30T16:30:47.334758"
+    },
+    "BaseModel.68ff9a8b-cad9-4d66-a467-98cd53b5e6ee": {
+        "updated_at": "2020-06-30T16:30:47.338686",
+        "my_number": 45,
+        "id": "68ff9a8b-cad9-4d66-a467-98cd53b5e6ee",
+        "name": "Holberton",
+        "created_at": "2020-06-30T16:30:47.338671",
+        "__class__": "BaseModel"
+    },
+    "City.a1b15338-fbbb-4afe-b3b0-5a32cb6089b7": {
+        "updated_at": "2020-06-30T16:31:35.723080",
+        "name": "Julien",
+        "id": "a1b15338-fbbb-4afe-b3b0-5a32cb6089b7",
+        "created_at": "2020-06-30T16:31:35.723073",
+        "state": "Antioquia",
+        "__class__": "City"
+    },
+    "State.54540966-71f9-4154-8b77-f5db19901eca": {
+        "updated_at": "2020-06-30T16:31:14.562187",
+        "name": "Marlon",
+        "__class__": "State",
+        "id": "54540966-71f9-4154-8b77-f5db19901eca",
+        "created_at": "2020-06-30T16:31:14.562170"
+    },
+    "State.aa32f73d-5520-47e9-90b6-2fd45b30dfaf": {
+        "updated_at": "2020-06-30T16:31:14.562587",
+        "name": "Marlon",
+        "__class__": "State",
+        "id": "aa32f73d-5520-47e9-90b6-2fd45b30dfaf",
+        "created_at": "2020-06-30T16:31:14.562580"
+    },
+    "BaseModel.23cbe402-7a2b-4da9-b7ea-a5774c8e6b6a": {
+        "id": "23cbe402-7a2b-4da9-b7ea-a5774c8e6b6a",
+        "created_at": "2020-06-30T16:31:35.652252",
+        "updated_at": "2020-06-30T16:31:35.652264",
+        "__class__": "BaseModel"
+    },
+    "BaseModel.600da1d0-7643-4437-b98a-4c2b9f6064b2": {
+        "id": "600da1d0-7643-4437-b98a-4c2b9f6064b2",
+        "created_at": "2020-06-30T16:31:35.702010",
+        "updated_at": "2020-06-30T16:31:35.702015",
+        "__class__": "BaseModel"
+    },
+    "Amenity.78582efd-46f9-4b1a-a3cf-f962608d47e7": {
+        "id": "78582efd-46f9-4b1a-a3cf-f962608d47e7",
+        "created_at": "2020-06-30T16:31:35.647364",
+        "updated_at": "2020-06-30T16:31:35.647383",
+        "__class__": "Amenity"
+    },
+    "BaseModel.6ab467ed-e4f3-4060-9340-11750ee1b28b": {
+        "id": "6ab467ed-e4f3-4060-9340-11750ee1b28b",
+        "created_at": "2020-06-30T16:31:35.706054",
+        "updated_at": "2020-06-30T16:31:35.706056",
+        "__class__": "BaseModel"
+    },
+    "BaseModel.9449b68f-2252-4ec2-b431-7ecf56e01e74": {
+        "updated_at": "2020-06-30T16:31:14.526462",
+        "id": "9449b68f-2252-4ec2-b431-7ecf56e01e74",
+        "__class__": "BaseModel",
+        "created_at": "2020-06-30T16:31:14.526460"
+    },
+    "BaseModel.3d3ebca1-bcec-4643-afad-333466ce7f7d": {
+        "updated_at": "2020-06-30T16:31:14.508572",
+        "id": "3d3ebca1-bcec-4643-afad-333466ce7f7d",
+        "__class__": "BaseModel",
+        "created_at": "2020-06-30T16:31:14.508568"
+    },
+    "Amenity.04e1727f-9fcd-4e40-9862-3f63da5f4dbe": {
+        "updated_at": "2020-06-30T16:31:14.465521",
+        "id": "04e1727f-9fcd-4e40-9862-3f63da5f4dbe",
+        "__class__": "Amenity",
+        "created_at": "2020-06-30T16:31:14.465505"
+    },
+    "State.0eb5f442-b628-49c0-94e1-a45c602367f8": {
+        "id": "0eb5f442-b628-49c0-94e1-a45c602367f8",
+        "created_at": "2020-06-30T16:31:35.757163",
+        "updated_at": "2020-06-30T16:31:35.757186",
+        "__class__": "State",
+        "name": "Marlon"
+    },
+    "State.ac0f69ab-f219-4816-a114-174f15d77590": {
+        "updated_at": "2020-06-30T16:30:47.382174",
+        "name": "Marlon",
+        "__class__": "State",
+        "id": "ac0f69ab-f219-4816-a114-174f15d77590",
+        "created_at": "2020-06-30T16:30:47.382164"
+    },
+    "BaseModel.978ef6f3-a285-4dd8-b120-00153aa23901": {
+        "updated_at": "2020-06-30T16:31:14.502874",
+        "id": "978ef6f3-a285-4dd8-b120-00153aa23901",
+        "__class__": "BaseModel",
+        "created_at": "2020-06-30T16:31:14.502871"
+    },
+    "BaseModel.70fce453-41e3-457b-9a7a-42a69478b5b3": {
+        "updated_at": "2020-06-30T16:31:14.503207",
+        "id": "70fce453-41e3-457b-9a7a-42a69478b5b3",
+        "__class__": "BaseModel",
+        "created_at": "2020-06-30T16:31:14.503201"
+    },
+    "BaseModel.16d7c871-633a-4e82-a948-63351fb1f414": {
+        "updated_at": "2020-06-30T16:31:14.522734",
+        "id": "16d7c871-633a-4e82-a948-63351fb1f414",
+        "__class__": "BaseModel",
+        "created_at": "2020-06-30T16:31:14.522732"
+    },
+    "BaseModel.7a4fd9f5-2f57-4b2a-b794-6b9f74cc8b4c": {
+        "updated_at": "2020-06-30T16:31:14.526738",
+        "id": "7a4fd9f5-2f57-4b2a-b794-6b9f74cc8b4c",
+        "__class__": "BaseModel",
+        "created_at": "2020-06-30T16:31:14.526736"
+    },
+    "Amenity.40045842-0df3-4917-b44a-0f5bd472b285": {
+        "updated_at": "2020-06-30T16:31:14.467080",
+        "id": "40045842-0df3-4917-b44a-0f5bd472b285",
+        "__class__": "Amenity",
+        "created_at": "2020-06-30T16:31:14.467064"
+    },
+    "User.ab93e855-12f4-4797-a7ef-eacb6b1c51a6": {
+        "updated_at": "2020-06-30T16:31:35.764174",
+        "password": "root",
+        "__class__": "User",
+        "first_name": "Betty",
+        "id": "ab93e855-12f4-4797-a7ef-eacb6b1c51a6",
+        "created_at": "2020-06-30T16:31:35.764169",
+        "email": "airbnb2@holbertonshool.com",
+        "last_name": "Holberton"
+    },
+    "BaseModel.c60adaba-79a9-4676-97bb-369c2181ff59": {
+        "updated_at": "2020-06-30T16:30:47.339024",
+        "id": "c60adaba-79a9-4676-97bb-369c2181ff59",
+        "__class__": "BaseModel",
+        "created_at": "2020-06-30T16:30:47.339022"
+    },
+    "User.13c9511f-4ffc-4030-b342-d4f07ecd7c17": {
+        "updated_at": "2020-06-30T16:31:35.764298",
+        "password": "root",
+        "__class__": "User",
+        "first_name": "Betty",
+        "id": "13c9511f-4ffc-4030-b342-d4f07ecd7c17",
+        "created_at": "2020-06-30T16:31:35.764293",
+        "email": "airbnb2@holbertonshool.com",
+        "last_name": "Holberton"
+    },
+    "BaseModel.dd30a4f6-92af-4d1c-bc09-63056c7a57cd": {
+        "updated_at": "2020-06-30T16:30:47.334159",
+        "id": "dd30a4f6-92af-4d1c-bc09-63056c7a57cd",
+        "__class__": "BaseModel",
+        "created_at": "2020-06-30T16:30:47.334158"
+    },
+    "BaseModel.e7ade13b-b07f-4deb-813d-c2b18c3c7459": {
+        "id": "e7ade13b-b07f-4deb-813d-c2b18c3c7459",
+        "created_at": "2020-06-30T16:31:35.667107",
+        "updated_at": "2020-06-30T16:31:35.667123",
+        "__class__": "BaseModel"
+    },
+    "Amenity.bd3f8a52-dc28-4d3a-988e-af816a855bd9": {
+        "updated_at": "2020-06-30T16:31:14.549330",
+        "name": "Deiwin",
+        "__class__": "Amenity",
+        "id": "bd3f8a52-dc28-4d3a-988e-af816a855bd9",
+        "created_at": "2020-06-30T16:31:14.549325"
+    },
+    "BaseModel.39a0a155-f17f-4c9d-b7f8-098c3e773ac3": {
+        "updated_at": "2020-06-30T16:30:47.356095",
+        "id": "39a0a155-f17f-4c9d-b7f8-098c3e773ac3",
+        "__class__": "BaseModel",
+        "created_at": "2020-06-30T16:30:47.356093"
+    },
+    "BaseModel.c13b2e05-6bd1-4af8-9df7-e49e0ddeb431": {
+        "updated_at": "2020-06-30T16:30:47.327358",
+        "id": "c13b2e05-6bd1-4af8-9df7-e49e0ddeb431",
+        "__class__": "BaseModel",
+        "created_at": "2020-06-30T16:30:47.327346"
+    },
+    "BaseModel.701b65c5-fd49-4132-b56c-4d3a3e6bc866": {
+        "id": "701b65c5-fd49-4132-b56c-4d3a3e6bc866",
+        "created_at": "2020-06-30T16:31:35.703083",
+        "updated_at": "2020-06-30T16:31:35.703089",
+        "__class__": "BaseModel"
+    },
+    "State.a8fae200-55eb-48b2-8330-b436bd874855": {
+        "updated_at": "2020-06-30T16:31:14.562386",
+        "name": "Marlon",
+        "__class__": "State",
+        "id": "a8fae200-55eb-48b2-8330-b436bd874855",
+        "created_at": "2020-06-30T16:31:14.562380"
+    },
+    "State.0d8b4b75-bf34-432f-a414-3a72c1005394": {
+        "updated_at": "2020-06-30T16:30:47.382936",
+        "name": "Marlon",
+        "__class__": "State",
+        "id": "0d8b4b75-bf34-432f-a414-3a72c1005394",
+        "created_at": "2020-06-30T16:30:47.382931"
+    },
+    "BaseModel.8a8feb4c-b99d-46be-be2e-f56f0d96a746": {
+        "id": "8a8feb4c-b99d-46be-be2e-f56f0d96a746",
+        "created_at": "2020-06-30T16:31:35.703117",
+        "updated_at": "2020-06-30T16:31:35.703120",
+        "__class__": "BaseModel"
+    },
+    "BaseModel.bc7d7d13-418f-477a-b8ea-00174d0394ec": {
+        "updated_at": "2020-06-30T16:31:14.471175",
+        "id": "bc7d7d13-418f-477a-b8ea-00174d0394ec",
+        "__class__": "BaseModel",
+        "created_at": "2020-06-30T16:31:14.471161"
+    },
+    "Amenity.59a2b96b-9bfa-4cc0-8922-ceff6ce6735d": {
+        "updated_at": "2020-06-30T16:30:47.370974",
+        "name": "Deiwin",
+        "__class__": "Amenity",
+        "id": "59a2b96b-9bfa-4cc0-8922-ceff6ce6735d",
+        "created_at": "2020-06-30T16:30:47.370955"
+    },
+    "City.33962f07-838f-4d94-a952-3a6f34d35b3c": {
+        "updated_at": "2020-06-30T16:30:47.356690",
+        "id": "33962f07-838f-4d94-a952-3a6f34d35b3c",
+        "name": "Julien",
+        "created_at": "2020-06-30T16:30:47.356683",
+        "state": "Antioquia",
+        "__class__": "City"
+    },
+    "Amenity.8980fe7a-ca40-442d-be1d-9da408fd6806": {
+        "updated_at": "2020-06-30T16:30:47.369850",
+        "name": "Deiwin",
+        "__class__": "Amenity",
+        "id": "8980fe7a-ca40-442d-be1d-9da408fd6806",
+        "created_at": "2020-06-30T16:30:47.369823"
+    },
+    "Place.df9a7366-907b-47c2-938c-69b2e89893fe": {
+        "updated_at": "2020-06-30T16:30:47.365133",
+        "number_bathrooms": 4,
+        "longitude": 108.9,
+        "number_rooms": 18,
+        "latitude": 78.2,
+        "amenity_ids": [
+            "56deq1626",
+            "1727132dhsad"
+        ],
+        "user_id": "Conforte",
+        "description": "Soleado",
+        "price_by_night": 305678,
+        "city_id": "Medellin987",
+        "id": "df9a7366-907b-47c2-938c-69b2e89893fe",
+        "name": "Betty",
+        "created_at": "2020-06-30T16:30:47.365129",
+        "__class__": "Place",
+        "max_guest": 245
+    },
+    "BaseModel.75a455bd-3d8f-450f-85db-e006b208c8fc": {
+        "updated_at": "2020-06-30T16:31:14.507487",
+        "my_number": 45,
+        "id": "75a455bd-3d8f-450f-85db-e006b208c8fc",
+        "name": "Holberton",
+        "created_at": "2020-06-30T16:31:14.507467",
+        "__class__": "BaseModel"
+    },
+    "City.098cd80c-6799-4bdd-afb0-58a235881eff": {
+        "updated_at": "2020-06-30T16:31:35.726731",
+        "name": "Julien",
+        "id": "098cd80c-6799-4bdd-afb0-58a235881eff",
+        "created_at": "2020-06-30T16:31:35.726694",
+        "state": "Antioquia",
+        "__class__": "City"
+    },
+    "State.77ab4447-b5d4-44f8-9b60-91719f7a1b94": {
+        "updated_at": "2020-06-30T16:31:14.497385",
+        "id": "77ab4447-b5d4-44f8-9b60-91719f7a1b94",
+        "__class__": "State",
+        "created_at": "2020-06-30T16:31:14.497367"
+    },
+    "Place.d52f8466-ae5a-4ea3-822f-b737d12a8d36": {
+        "updated_at": "2020-06-30T16:31:14.485150",
+        "id": "d52f8466-ae5a-4ea3-822f-b737d12a8d36",
+        "__class__": "Place",
+        "created_at": "2020-06-30T16:31:14.484888"
+    },
+    "City.5699543d-22b3-480b-b3a0-4c6202e12fdb": {
+        "updated_at": "2020-06-30T16:31:14.528964",
+        "id": "5699543d-22b3-480b-b3a0-4c6202e12fdb",
+        "name": "Julien",
+        "created_at": "2020-06-30T16:31:14.528944",
+        "state": "Antioquia",
+        "__class__": "City"
+    },
+    "State.0c46519e-602b-4119-9a8c-28edecfca428": {
+        "id": "0c46519e-602b-4119-9a8c-28edecfca428",
+        "created_at": "2020-06-30T16:31:35.754632",
+        "updated_at": "2020-06-30T16:31:35.754639",
+        "__class__": "State",
+        "name": "Marlon"
+    },
+    "BaseModel.2eac90cc-1748-4122-bb69-c05f972045b9": {
+        "id": "2eac90cc-1748-4122-bb69-c05f972045b9",
+        "created_at": "2020-06-30T16:31:35.701798",
+        "updated_at": "2020-06-30T16:31:35.701812",
+        "__class__": "BaseModel"
+    },
+    "BaseModel.f55a2cc9-554a-44f2-b868-36aec48b1156": {
+        "updated_at": "2020-06-30T16:31:14.502827",
+        "id": "f55a2cc9-554a-44f2-b868-36aec48b1156",
+        "__class__": "BaseModel",
+        "created_at": "2020-06-30T16:31:14.502810"
+    },
+    "BaseModel.b90fb975-6efc-4fae-a833-a6516a40f1c9": {
+        "updated_at": "2020-06-30T16:31:35.705820",
+        "my_number": 45,
+        "id": "b90fb975-6efc-4fae-a833-a6516a40f1c9",
+        "created_at": "2020-06-30T16:31:35.705813",
+        "name": "Holberton",
+        "__class__": "BaseModel"
+    },
+    "State.2a9bf5da-b593-4e67-ba39-884058fe2b1c": {
+        "updated_at": "2020-06-30T16:31:14.495439",
+        "id": "2a9bf5da-b593-4e67-ba39-884058fe2b1c",
+        "__class__": "State",
+        "created_at": "2020-06-30T16:31:14.495401"
+    },
+    "User.0e33ab83-842e-400d-a47d-9835d5d28f90": {
+        "updated_at": "2020-06-30T16:30:47.389075",
+        "first_name": "Betty",
+        "last_name": "Holberton",
+        "password": "root",
+        "id": "0e33ab83-842e-400d-a47d-9835d5d28f90",
+        "created_at": "2020-06-30T16:30:47.389073",
+        "email": "airbnb2@holbertonshool.com",
+        "__class__": "User"
+    },
+    "Review.140ab50a-7b1d-49c4-854e-900e7e0d3fd8": {
+        "updated_at": "2020-06-30T16:31:14.487765",
+        "id": "140ab50a-7b1d-49c4-854e-900e7e0d3fd8",
+        "__class__": "Review",
+        "created_at": "2020-06-30T16:31:14.487745"
+    },
+    "BaseModel.29ac4b65-1db7-4b30-af02-3d44ddb3d6a7": {
+        "updated_at": "2020-06-30T16:30:47.355859",
+        "id": "29ac4b65-1db7-4b30-af02-3d44ddb3d6a7",
+        "__class__": "BaseModel",
+        "created_at": "2020-06-30T16:30:47.355852"
+    },
+    "City.b61b442e-96d1-4315-b41e-0dacad6762fd": {
+        "updated_at": "2020-06-30T16:30:47.358813",
+        "id": "b61b442e-96d1-4315-b41e-0dacad6762fd",
+        "name": "Julien",
+        "created_at": "2020-06-30T16:30:47.358794",
+        "state": "Antioquia",
+        "__class__": "City"
+    },
+    "City.5ee8033d-7405-49c3-85d0-7aa3f59fd3a0": {
+        "updated_at": "2020-06-30T16:31:35.723228",
+        "name": "Julien",
+        "id": "5ee8033d-7405-49c3-85d0-7aa3f59fd3a0",
+        "created_at": "2020-06-30T16:31:35.723223",
+        "state": "Antioquia",
+        "__class__": "City"
+    },
+    "Place.fdc4d075-a10a-448d-b4e9-e6a9f6441a3b": {
+        "id": "fdc4d075-a10a-448d-b4e9-e6a9f6441a3b",
+        "created_at": "2020-06-30T16:31:35.667478",
+        "updated_at": "2020-06-30T16:31:35.667491",
+        "__class__": "Place"
+    },
+    "BaseModel.149d2f38-df9d-4513-aaf7-111334dc29f7": {
+        "id": "149d2f38-df9d-4513-aaf7-111334dc29f7",
+        "created_at": "2020-06-30T16:31:35.705854",
+        "updated_at": "2020-06-30T16:31:35.705856",
+        "__class__": "BaseModel"
+    },
+    "State.2de8ff0a-55ae-45e7-93b6-694831502b2c": {
+        "updated_at": "2020-06-30T16:30:47.382801",
+        "name": "Marlon",
+        "__class__": "State",
+        "id": "2de8ff0a-55ae-45e7-93b6-694831502b2c",
+        "created_at": "2020-06-30T16:30:47.382796"
+    },
+    "Amenity.4e308444-8716-4da2-89e4-69bd05244ca0": {
+        "updated_at": "2020-06-30T16:30:47.373798",
+        "name": "Deiwin",
+        "__class__": "Amenity",
+        "id": "4e308444-8716-4da2-89e4-69bd05244ca0",
+        "created_at": "2020-06-30T16:30:47.373771"
+    },
+    "User.6e715d81-c6b1-4713-afeb-06473ec501fb": {
+        "updated_at": "2020-06-30T16:31:14.498961",
+        "id": "6e715d81-c6b1-4713-afeb-06473ec501fb",
+        "__class__": "User",
+        "created_at": "2020-06-30T16:31:14.498946"
+    },
+    "Amenity.4300fb40-d56a-4e8c-a419-6fcaa987ad62": {
+        "id": "4300fb40-d56a-4e8c-a419-6fcaa987ad62",
+        "created_at": "2020-06-30T16:31:35.740744",
+        "updated_at": "2020-06-30T16:31:35.740750",
+        "__class__": "Amenity",
+        "name": "Deiwin"
+    },
+    "State.91f4bd31-0aaa-4504-8223-b671e67c6f85": {
+        "updated_at": "2020-06-30T16:31:14.565116",
+        "name": "Marlon",
+        "__class__": "State",
+        "id": "91f4bd31-0aaa-4504-8223-b671e67c6f85",
+        "created_at": "2020-06-30T16:31:14.565089"
+    },
+    "Amenity.6b61809a-e08d-4fec-9ffa-22e743f0fd8b": {
+        "id": "6b61809a-e08d-4fec-9ffa-22e743f0fd8b",
+        "created_at": "2020-06-30T16:31:35.746148",
+        "updated_at": "2020-06-30T16:31:35.746183",
+        "__class__": "Amenity",
+        "name": "Deiwin"
+    },
+    "Place.636687fb-1307-48c2-a7ed-45713aca4aff": {
+        "updated_at": "2020-06-30T16:31:35.732965",
+        "number_bathrooms": 4,
+        "__class__": "Place",
+        "longitude": 108.9,
+        "latitude": 78.2,
+        "amenity_ids": [
+            "56deq1626",
+            "1727132dhsad"
+        ],
+        "name": "Betty",
+        "city_id": "Medellin987",
+        "description": "Soleado",
+        "price_by_night": 305678,
+        "user_id": "Conforte",
+        "id": "636687fb-1307-48c2-a7ed-45713aca4aff",
+        "created_at": "2020-06-30T16:31:35.732950",
+        "max_guest": 245,
+        "number_rooms": 18
+    },
+    "Place.e1ed38b5-5d52-42bc-8ef7-a9561dfb9e4b": {
+        "updated_at": "2020-06-30T16:30:47.367324",
+        "number_bathrooms": 4,
+        "longitude": 108.9,
+        "number_rooms": 18,
+        "latitude": 78.2,
+        "amenity_ids": [
+            "56deq1626",
+            "1727132dhsad"
+        ],
+        "user_id": "Conforte",
+        "description": "Soleado",
+        "price_by_night": 305678,
+        "city_id": "Medellin987",
+        "id": "e1ed38b5-5d52-42bc-8ef7-a9561dfb9e4b",
+        "name": "Betty",
+        "created_at": "2020-06-30T16:30:47.367290",
+        "__class__": "Place",
+        "max_guest": 245
+    },
+    "City.fc1fc79a-463b-4514-8058-f36eef3e131a": {
+        "updated_at": "2020-06-30T16:31:35.724036",
+        "name": "Julien",
+        "id": "fc1fc79a-463b-4514-8058-f36eef3e131a",
+        "created_at": "2020-06-30T16:31:35.724021",
+        "state": "Antioquia",
+        "__class__": "City"
+    },
+    "City.729e6237-b117-462e-98a0-365427f593ad": {
+        "updated_at": "2020-06-30T16:30:47.356441",
+        "id": "729e6237-b117-462e-98a0-365427f593ad",
+        "name": "Julien",
+        "created_at": "2020-06-30T16:30:47.356435",
+        "state": "Antioquia",
+        "__class__": "City"
+    },
+    "Amenity.9ae02b33-3cb6-4f2b-895e-f359faefe2d8": {
+        "updated_at": "2020-06-30T16:30:47.325673",
+        "created_at": "2020-06-30T16:30:47.325658",
+        "__class__": "Amenity",
+        "id": "9ae02b33-3cb6-4f2b-895e-f359faefe2d8"
+    },
+    "BaseModel.6eb0a5b4-8ed9-40fb-ae0e-21ef566c44b5": {
+        "id": "6eb0a5b4-8ed9-40fb-ae0e-21ef566c44b5",
+        "created_at": "2020-06-30T16:31:35.722711",
+        "updated_at": "2020-06-30T16:31:35.722713",
+        "__class__": "BaseModel"
+    },
+    "BaseModel.8945d18e-ff72-4444-847b-c326a4b2e05f": {
+        "id": "8945d18e-ff72-4444-847b-c326a4b2e05f",
+        "created_at": "2020-06-30T16:31:35.722456",
+        "updated_at": "2020-06-30T16:31:35.722463",
+        "__class__": "BaseModel"
+    },
+    "City.36daecdf-db64-4bc8-888b-18ab6395df95": {
+        "updated_at": "2020-06-30T16:31:35.722914",
+        "name": "Julien",
+        "id": "36daecdf-db64-4bc8-888b-18ab6395df95",
+        "created_at": "2020-06-30T16:31:35.722909",
+        "state": "Antioquia",
+        "__class__": "City"
+    },
+    "City.3c6828ad-3441-457b-8ffa-cccb696dc5a2": {
+        "updated_at": "2020-06-30T16:30:47.356565",
+        "id": "3c6828ad-3441-457b-8ffa-cccb696dc5a2",
+        "name": "Julien",
+        "created_at": "2020-06-30T16:30:47.356561",
+        "state": "Antioquia",
+        "__class__": "City"
+    },
+    "City.4c3a7534-f592-475f-8df5-c39febd2a951": {
+        "updated_at": "2020-06-30T16:30:47.364235",
+        "id": "4c3a7534-f592-475f-8df5-c39febd2a951",
+        "name": "Julien",
+        "created_at": "2020-06-30T16:30:47.364220",
+        "state": "Antioquia",
+        "__class__": "City"
+    },
+    "BaseModel.0850f3cf-4db2-4f6b-ad36-adcf2a6c1848": {
+        "updated_at": "2020-06-30T16:31:14.503546",
+        "id": "0850f3cf-4db2-4f6b-ad36-adcf2a6c1848",
+        "__class__": "BaseModel",
+        "created_at": "2020-06-30T16:31:14.503541"
+    },
+    "City.33ab93cd-f17b-4739-b8a6-7feaa2d8dc07": {
+        "updated_at": "2020-06-30T16:31:14.529815",
+        "id": "33ab93cd-f17b-4739-b8a6-7feaa2d8dc07",
+        "name": "Julien",
+        "created_at": "2020-06-30T16:31:14.529805",
+        "state": "Antioquia",
+        "__class__": "City"
+    },
+    "State.83cda0fc-0746-4d9e-b4a4-bc7b7c647656": {
+        "updated_at": "2020-06-30T16:30:47.382525",
+        "name": "Marlon",
+        "__class__": "State",
+        "id": "83cda0fc-0746-4d9e-b4a4-bc7b7c647656",
+        "created_at": "2020-06-30T16:30:47.382520"
+    },
+    "User.e0c6e92e-aedf-4806-85c9-912cab6f6734": {
+        "updated_at": "2020-06-30T16:31:35.763833",
+        "password": "root",
+        "__class__": "User",
+        "first_name": "Betty",
+        "id": "e0c6e92e-aedf-4806-85c9-912cab6f6734",
+        "created_at": "2020-06-30T16:31:35.763823",
+        "email": "airbnb2@holbertonshool.com",
+        "last_name": "Holberton"
+    },
+    "Review.6b9970d5-9efe-4de2-a5a7-805b40964470": {
+        "id": "6b9970d5-9efe-4de2-a5a7-805b40964470",
+        "created_at": "2020-06-30T16:31:35.675910",
+        "updated_at": "2020-06-30T16:31:35.675937",
+        "__class__": "Review"
+    },
+    "Place.0bc08aee-6e24-46df-bbec-179acc57f391": {
+        "updated_at": "2020-06-30T16:30:47.364457",
+        "number_bathrooms": 4,
+        "longitude": 108.9,
+        "number_rooms": 18,
+        "latitude": 78.2,
+        "amenity_ids": [
+            "56deq1626",
+            "1727132dhsad"
+        ],
+        "user_id": "Conforte",
+        "description": "Soleado",
+        "price_by_night": 305678,
+        "city_id": "Medellin987",
+        "id": "0bc08aee-6e24-46df-bbec-179acc57f391",
+        "name": "Betty",
+        "created_at": "2020-06-30T16:30:47.364451",
+        "__class__": "Place",
+        "max_guest": 245
+    },
+    "Place.7afbe1f9-7b38-4a82-8102-4e7d38cbac0e": {
+        "updated_at": "2020-06-30T16:31:35.733543",
+        "number_bathrooms": 4,
+        "__class__": "Place",
+        "longitude": 108.9,
+        "latitude": 78.2,
+        "amenity_ids": [
+            "56deq1626",
+            "1727132dhsad"
+        ],
+        "name": "Betty",
+        "city_id": "Medellin987",
+        "description": "Soleado",
+        "price_by_night": 305678,
+        "user_id": "Conforte",
+        "id": "7afbe1f9-7b38-4a82-8102-4e7d38cbac0e",
+        "created_at": "2020-06-30T16:31:35.733539",
+        "max_guest": 245,
+        "number_rooms": 18
+    },
+    "Place.24f86688-cb43-473f-a6cb-d8fecdb63b59": {
+        "updated_at": "2020-06-30T16:30:47.365007",
+        "number_bathrooms": 4,
+        "longitude": 108.9,
+        "number_rooms": 18,
+        "latitude": 78.2,
+        "amenity_ids": [
+            "56deq1626",
+            "1727132dhsad"
+        ],
+        "user_id": "Conforte",
+        "description": "Soleado",
+        "price_by_night": 305678,
+        "city_id": "Medellin987",
+        "id": "24f86688-cb43-473f-a6cb-d8fecdb63b59",
+        "name": "Betty",
+        "created_at": "2020-06-30T16:30:47.365003",
+        "__class__": "Place",
+        "max_guest": 245
+    },
+    "BaseModel.04c9df20-8a07-4520-b75c-53868852f884": {
+        "updated_at": "2020-06-30T16:30:47.334566",
+        "id": "04c9df20-8a07-4520-b75c-53868852f884",
+        "__class__": "BaseModel",
+        "created_at": "2020-06-30T16:30:47.334562"
+    },
+    "Amenity.b9c480ee-f30e-4c73-bd8d-7a51692cee40": {
+        "updated_at": "2020-06-30T16:31:14.554177",
+        "name": "Deiwin",
+        "__class__": "Amenity",
+        "id": "b9c480ee-f30e-4c73-bd8d-7a51692cee40",
+        "created_at": "2020-06-30T16:31:14.554143"
+    },
+    "Place.e16de25a-cb88-4d74-8fe6-4b4cac2c5e92": {
+        "updated_at": "2020-06-30T16:30:47.364871",
+        "number_bathrooms": 4,
+        "longitude": 108.9,
+        "number_rooms": 18,
+        "latitude": 78.2,
+        "amenity_ids": [
+            "56deq1626",
+            "1727132dhsad"
+        ],
+        "user_id": "Conforte",
+        "description": "Soleado",
+        "price_by_night": 305678,
+        "city_id": "Medellin987",
+        "id": "e16de25a-cb88-4d74-8fe6-4b4cac2c5e92",
+        "name": "Betty",
+        "created_at": "2020-06-30T16:30:47.364866",
+        "__class__": "Place",
+        "max_guest": 245
+    },
+    "User.67906827-98eb-4f0a-a6dd-c4ec0d4d5582": {
+        "updated_at": "2020-06-30T16:31:14.577595",
+        "first_name": "Betty",
+        "last_name": "Holberton",
+        "password": "root",
+        "id": "67906827-98eb-4f0a-a6dd-c4ec0d4d5582",
+        "created_at": "2020-06-30T16:31:14.577542",
+        "email": "airbnb2@holbertonshool.com",
+        "__class__": "User"
+    },
+    "State.7ad9362c-737c-473d-9fad-d8f68ffb6dca": {
+        "id": "7ad9362c-737c-473d-9fad-d8f68ffb6dca",
+        "created_at": "2020-06-30T16:31:35.755033",
+        "updated_at": "2020-06-30T16:31:35.755038",
+        "__class__": "State",
+        "name": "Marlon"
+    },
+    "BaseModel.630667c5-1bab-408b-aa5d-9c0a65cce243": {
+        "updated_at": "2020-06-30T16:31:35.722685",
+        "my_number": 45,
+        "id": "630667c5-1bab-408b-aa5d-9c0a65cce243",
+        "created_at": "2020-06-30T16:31:35.722681",
+        "name": "Holberton",
+        "__class__": "BaseModel"
+    },
+    "State.e91a5b55-42ac-40ce-9db4-624db33b0c22": {
+        "updated_at": "2020-06-30T16:31:14.562735",
+        "name": "Marlon",
+        "__class__": "State",
+        "id": "e91a5b55-42ac-40ce-9db4-624db33b0c22",
+        "created_at": "2020-06-30T16:31:14.562729"
+    },
+    "BaseModel.bfb585ca-eb20-44e0-b219-a16c1e6cf47f": {
+        "updated_at": "2020-06-30T16:30:47.354949",
+        "id": "bfb585ca-eb20-44e0-b219-a16c1e6cf47f",
+        "__class__": "BaseModel",
+        "created_at": "2020-06-30T16:30:47.354888"
+    },
+    "Amenity.45bba853-288c-423b-8b42-1285aae7fa17": {
+        "updated_at": "2020-06-30T16:30:47.381778",
+        "name": "Deiwin",
+        "__class__": "Amenity",
+        "id": "45bba853-288c-423b-8b42-1285aae7fa17",
+        "created_at": "2020-06-30T16:30:47.381760"
+    },
+    "User.9117b032-5650-4cc8-9794-a335a68802a6": {
+        "updated_at": "2020-06-30T16:31:14.571861",
+        "first_name": "Betty",
+        "last_name": "Holberton",
+        "password": "root",
+        "id": "9117b032-5650-4cc8-9794-a335a68802a6",
+        "created_at": "2020-06-30T16:31:14.571855",
+        "email": "airbnb2@holbertonshool.com",
+        "__class__": "User"
+    },
+    "Place.9944d067-a064-4415-9851-650553e8ef2f": {
+        "updated_at": "2020-06-30T16:30:47.329365",
+        "created_at": "2020-06-30T16:30:47.329355",
+        "__class__": "Place",
+        "id": "9944d067-a064-4415-9851-650553e8ef2f"
+    },
+    "Amenity.c4bac5bc-f833-4535-bc8f-f51abb7fee95": {
+        "updated_at": "2020-06-30T16:31:14.560844",
+        "name": "Deiwin",
+        "__class__": "Amenity",
+        "id": "c4bac5bc-f833-4535-bc8f-f51abb7fee95",
+        "created_at": "2020-06-30T16:31:14.560746"
+    },
+    "User.8221de8e-713b-4d31-8e4f-b630b24dfff5": {
+        "updated_at": "2020-06-30T16:30:47.390371",
+        "first_name": "Betty",
+        "last_name": "Holberton",
+        "password": "root",
+        "id": "8221de8e-713b-4d31-8e4f-b630b24dfff5",
+        "created_at": "2020-06-30T16:30:47.390364",
+        "email": "airbnb2@holbertonshool.com",
+        "__class__": "User"
+    },
+    "BaseModel.9b182f7c-49b1-4010-be21-63eec41b683a": {
+        "updated_at": "2020-06-30T16:30:47.334014",
+        "id": "9b182f7c-49b1-4010-be21-63eec41b683a",
+        "__class__": "BaseModel",
+        "created_at": "2020-06-30T16:30:47.334012"
+    },
+    "BaseModel.fdc99978-af8c-43b8-b235-fecc28956c7c": {
+        "updated_at": "2020-06-30T16:30:47.334134",
+        "id": "fdc99978-af8c-43b8-b235-fecc28956c7c",
+        "__class__": "BaseModel",
+        "created_at": "2020-06-30T16:30:47.334130"
+    },
+    "BaseModel.77bbe73c-4db3-4e54-bd95-81ef38b560f8": {
+        "updated_at": "2020-06-30T16:31:14.508515",
+        "id": "77bbe73c-4db3-4e54-bd95-81ef38b560f8",
+        "__class__": "BaseModel",
+        "created_at": "2020-06-30T16:31:14.508496"
+    },
+    "BaseModel.1c3dd0d6-1870-4c1f-88e8-da4231ac3951": {
+        "updated_at": "2020-06-30T16:31:14.503387",
+        "id": "1c3dd0d6-1870-4c1f-88e8-da4231ac3951",
+        "__class__": "BaseModel",
+        "created_at": "2020-06-30T16:31:14.503382"
+    },
+    "User.275ec3a6-7133-4381-9e1a-5153e19564fa": {
+        "updated_at": "2020-06-30T16:30:47.393185",
+        "first_name": "Betty",
+        "last_name": "Holberton",
+        "password": "root",
+        "id": "275ec3a6-7133-4381-9e1a-5153e19564fa",
+        "created_at": "2020-06-30T16:30:47.393092",
+        "email": "airbnb2@holbertonshool.com",
+        "__class__": "User"
+    },
+    "Amenity.79d4f260-50f8-4408-845a-9b9f708dad50": {
+        "id": "79d4f260-50f8-4408-845a-9b9f708dad50",
+        "created_at": "2020-06-30T16:31:35.740937",
+        "updated_at": "2020-06-30T16:31:35.740944",
+        "__class__": "Amenity",
+        "name": "Deiwin"
+    },
+    "City.e700c09c-4b81-4460-8dba-1fbc27bf85e6": {
+        "updated_at": "2020-06-30T16:30:47.328096",
+        "id": "e700c09c-4b81-4460-8dba-1fbc27bf85e6",
+        "__class__": "City",
+        "created_at": "2020-06-30T16:30:47.328085"
+    },
+    "Amenity.ecab333d-80ff-4a25-be8e-342cc17fd6f9": {
+        "updated_at": "2020-06-30T16:30:47.371195",
+        "name": "Deiwin",
+        "__class__": "Amenity",
+        "id": "ecab333d-80ff-4a25-be8e-342cc17fd6f9",
+        "created_at": "2020-06-30T16:30:47.371189"
+    },
+    "Amenity.600165f7-05bc-4f73-9eb5-3c1aff5fba11": {
+        "updated_at": "2020-06-30T16:31:14.548766",
+        "name": "Deiwin",
+        "__class__": "Amenity",
+        "id": "600165f7-05bc-4f73-9eb5-3c1aff5fba11",
+        "created_at": "2020-06-30T16:31:14.548759"
+    },
+    "State.1509a40e-5e93-4456-a1f8-d2fde0928ff2": {
+        "updated_at": "2020-06-30T16:31:14.562445",
+        "name": "Marlon",
+        "__class__": "State",
+        "id": "1509a40e-5e93-4456-a1f8-d2fde0928ff2",
+        "created_at": "2020-06-30T16:31:14.562445"
+    },
+    "BaseModel.60bc693c-5a7b-4682-ae30-dbd13b4d8b4c": {
+        "id": "60bc693c-5a7b-4682-ae30-dbd13b4d8b4c",
+        "created_at": "2020-06-30T16:31:35.701848",
+        "updated_at": "2020-06-30T16:31:35.701851",
+        "__class__": "BaseModel"
+    },
+    "Place.353f3325-664c-4589-8945-b00c1986b1e2": {
+        "id": "353f3325-664c-4589-8945-b00c1986b1e2",
+        "created_at": "2020-06-30T16:31:35.670113",
+        "updated_at": "2020-06-30T16:31:35.670129",
+        "__class__": "Place"
+    },
+    "BaseModel.d95f8af9-ee3b-48fe-9366-b64bbf19e54a": {
+        "updated_at": "2020-06-30T16:30:47.338997",
+        "id": "d95f8af9-ee3b-48fe-9366-b64bbf19e54a",
+        "__class__": "BaseModel",
+        "created_at": "2020-06-30T16:30:47.338993"
+    },
+    "User.22170ee3-55fb-426f-a715-6a8a250be43f": {
+        "updated_at": "2020-06-30T16:31:35.764562",
+        "password": "root",
+        "__class__": "User",
+        "first_name": "Betty",
+        "id": "22170ee3-55fb-426f-a715-6a8a250be43f",
+        "created_at": "2020-06-30T16:31:35.764557",
+        "email": "airbnb2@holbertonshool.com",
+        "last_name": "Holberton"
+    },
+    "Review.bb245f51-5673-4acb-bef2-6fcb2c862528": {
+        "updated_at": "2020-06-30T16:30:47.331530",
+        "id": "bb245f51-5673-4acb-bef2-6fcb2c862528",
+        "__class__": "Review",
+        "created_at": "2020-06-30T16:30:47.331514"
+    },
+    "Place.52591ab2-8264-4624-8835-4626925255b7": {
+        "updated_at": "2020-06-30T16:31:14.537547",
+        "number_bathrooms": 4,
+        "longitude": 108.9,
+        "number_rooms": 18,
+        "latitude": 78.2,
+        "amenity_ids": [
+            "56deq1626",
+            "1727132dhsad"
+        ],
+        "name": "Betty",
+        "user_id": "Conforte",
+        "description": "Soleado",
+        "price_by_night": 305678,
+        "city_id": "Medellin987",
+        "id": "52591ab2-8264-4624-8835-4626925255b7",
+        "created_at": "2020-06-30T16:31:14.537541",
+        "__class__": "Place",
+        "max_guest": 245
+    },
+    "BaseModel.1e1a88d5-6df9-422c-9aef-f66d664e51e0": {
+        "id": "1e1a88d5-6df9-422c-9aef-f66d664e51e0",
+        "created_at": "2020-06-30T16:31:35.706019",
+        "updated_at": "2020-06-30T16:31:35.706024",
+        "__class__": "BaseModel"
+    },
+    "Place.1b545f76-5a1f-4d5f-b6f3-55a4ce60598d": {
+        "updated_at": "2020-06-30T16:31:14.480297",
+        "id": "1b545f76-5a1f-4d5f-b6f3-55a4ce60598d",
+        "__class__": "Place",
+        "created_at": "2020-06-30T16:31:14.480256"
+    },
+    "BaseModel.409d9fdf-b2c5-4b8c-9c22-a3ef469391be": {
+        "updated_at": "2020-06-30T16:30:47.333989",
+        "id": "409d9fdf-b2c5-4b8c-9c22-a3ef469391be",
+        "__class__": "BaseModel",
+        "created_at": "2020-06-30T16:30:47.333984"
+    },
+    "City.76f0e162-7fe8-4cc4-a9d2-07fb7afb6c74": {
+        "updated_at": "2020-06-30T16:30:47.356299",
+        "id": "76f0e162-7fe8-4cc4-a9d2-07fb7afb6c74",
+        "name": "Julien",
+        "created_at": "2020-06-30T16:30:47.356294",
+        "state": "Antioquia",
+        "__class__": "City"
+    },
+    "Review.dbef9a1c-149b-4550-b8bd-6985c2ab2a11": {
+        "id": "dbef9a1c-149b-4550-b8bd-6985c2ab2a11",
+        "created_at": "2020-06-30T16:31:35.680079",
+        "updated_at": "2020-06-30T16:31:35.680099",
+        "__class__": "Review"
+    },
+    "Place.3eaca651-57fd-4678-851a-d9f6f8dc81ae": {
+        "updated_at": "2020-06-30T16:30:47.364604",
+        "number_bathrooms": 4,
+        "longitude": 108.9,
+        "number_rooms": 18,
+        "latitude": 78.2,
+        "amenity_ids": [
+            "56deq1626",
+            "1727132dhsad"
+        ],
+        "user_id": "Conforte",
+        "description": "Soleado",
+        "price_by_night": 305678,
+        "city_id": "Medellin987",
+        "id": "3eaca651-57fd-4678-851a-d9f6f8dc81ae",
+        "name": "Betty",
+        "created_at": "2020-06-30T16:30:47.364599",
+        "__class__": "Place",
+        "max_guest": 245
+    },
+    "Place.740e5e14-44de-44f7-9881-9ca370b54e5c": {
+        "updated_at": "2020-06-30T16:31:14.537009",
+        "number_bathrooms": 4,
+        "longitude": 108.9,
+        "number_rooms": 18,
+        "latitude": 78.2,
+        "amenity_ids": [
+            "56deq1626",
+            "1727132dhsad"
+        ],
+        "name": "Betty",
+        "user_id": "Conforte",
+        "description": "Soleado",
+        "price_by_night": 305678,
+        "city_id": "Medellin987",
+        "id": "740e5e14-44de-44f7-9881-9ca370b54e5c",
+        "created_at": "2020-06-30T16:31:14.537001",
+        "__class__": "Place",
+        "max_guest": 245
+    },
+    "State.aa02435c-a986-4c52-8697-48d709e2fabf": {
+        "id": "aa02435c-a986-4c52-8697-48d709e2fabf",
+        "created_at": "2020-06-30T16:31:35.687558",
+        "updated_at": "2020-06-30T16:31:35.687579",
+        "__class__": "State"
+    },
+    "City.c7337ac1-1e61-4b3d-83b6-9fa25d2728ce": {
+        "updated_at": "2020-06-30T16:31:14.473084",
+        "id": "c7337ac1-1e61-4b3d-83b6-9fa25d2728ce",
+        "__class__": "City",
+        "created_at": "2020-06-30T16:31:14.473061"
+    },
+    "Amenity.44b4d478-f569-4b29-988d-66d88790e93c": {
+        "updated_at": "2020-06-30T16:30:47.371335",
+        "name": "Deiwin",
+        "__class__": "Amenity",
+        "id": "44b4d478-f569-4b29-988d-66d88790e93c",
+        "created_at": "2020-06-30T16:30:47.371330"
+    },
+    "Place.530a41b9-3e68-4e27-b317-f5c83dffdae9": {
+        "updated_at": "2020-06-30T16:31:14.540443",
+        "number_bathrooms": 4,
+        "longitude": 108.9,
+        "number_rooms": 18,
+        "latitude": 78.2,
+        "amenity_ids": [
+            "56deq1626",
+            "1727132dhsad"
+        ],
+        "name": "Betty",
+        "user_id": "Conforte",
+        "description": "Soleado",
+        "price_by_night": 305678,
+        "city_id": "Medellin987",
+        "id": "530a41b9-3e68-4e27-b317-f5c83dffdae9",
+        "created_at": "2020-06-30T16:31:14.540397",
+        "__class__": "Place",
+        "max_guest": 245
+    },
+    "User.62c9590a-d71b-498a-86ad-27dd7796efbf": {
+        "updated_at": "2020-06-30T16:31:14.571581",
+        "first_name": "Betty",
+        "last_name": "Holberton",
+        "password": "root",
+        "id": "62c9590a-d71b-498a-86ad-27dd7796efbf",
+        "created_at": "2020-06-30T16:31:14.571575",
+        "email": "airbnb2@holbertonshool.com",
+        "__class__": "User"
+    },
+    "BaseModel.183e47d3-b963-4f99-ad43-a0dfc424f145": {
+        "updated_at": "2020-06-30T16:30:47.354936",
+        "id": "183e47d3-b963-4f99-ad43-a0dfc424f145",
+        "__class__": "BaseModel",
+        "created_at": "2020-06-30T16:30:47.354934"
+    },
+    "User.76a4575d-eff6-4282-83a2-ce72cd64c28d": {
+        "id": "76a4575d-eff6-4282-83a2-ce72cd64c28d",
+        "created_at": "2020-06-30T16:31:35.697505",
+        "updated_at": "2020-06-30T16:31:35.697530",
+        "__class__": "User"
+    },
+    "Amenity.3b68266a-fa06-48c8-ac1e-f8ff4839804d": {
+        "id": "3b68266a-fa06-48c8-ac1e-f8ff4839804d",
+        "created_at": "2020-06-30T16:31:35.741786",
+        "updated_at": "2020-06-30T16:31:35.741797",
+        "__class__": "Amenity",
+        "name": "Deiwin"
+    },
+    "State.08b07e8c-4006-4d09-b048-3afda1f5da15": {
+        "updated_at": "2020-06-30T16:30:47.388693",
+        "name": "Marlon",
+        "__class__": "State",
+        "id": "08b07e8c-4006-4d09-b048-3afda1f5da15",
+        "created_at": "2020-06-30T16:30:47.388673"
+    },
+    "State.71ad43df-0919-4577-af1c-e43d0ff656bf": {
+        "updated_at": "2020-06-30T16:30:47.382663",
+        "name": "Marlon",
+        "__class__": "State",
+        "id": "71ad43df-0919-4577-af1c-e43d0ff656bf",
+        "created_at": "2020-06-30T16:30:47.382658"
+    },
+    "BaseModel.bcefbfcf-65cb-4014-92e5-22e177aaf716": {
+        "id": "bcefbfcf-65cb-4014-92e5-22e177aaf716",
+        "created_at": "2020-06-30T16:31:35.719673",
+        "updated_at": "2020-06-30T16:31:35.719790",
+        "__class__": "BaseModel"
+    },
+    "State.6fab370c-9787-4ebd-b801-49d5a9ce9de3": {
+        "id": "6fab370c-9787-4ebd-b801-49d5a9ce9de3",
+        "created_at": "2020-06-30T16:31:35.763509",
+        "updated_at": "2020-06-30T16:31:35.763524",
+        "__class__": "State",
+        "name": "Marlon"
+    },
+    "City.15fbab51-c942-47fc-a0a7-b5c30827ea80": {
+        "updated_at": "2020-06-30T16:31:14.527252",
+        "id": "15fbab51-c942-47fc-a0a7-b5c30827ea80",
+        "name": "Julien",
+        "created_at": "2020-06-30T16:31:14.527246",
+        "state": "Antioquia",
+        "__class__": "City"
+    },
+    "BaseModel.35f65b62-9068-4f23-932e-674c09768355": {
+        "id": "35f65b62-9068-4f23-932e-674c09768355",
+        "created_at": "2020-06-30T16:31:35.722492",
+        "updated_at": "2020-06-30T16:31:35.722494",
+        "__class__": "BaseModel"
+    },
+    "BaseModel.bf048558-a8d5-4d8d-98bf-398a6d7c3bd0": {
+        "id": "bf048558-a8d5-4d8d-98bf-398a6d7c3bd0",
+        "created_at": "2020-06-30T16:31:35.702044",
+        "updated_at": "2020-06-30T16:31:35.702046",
+        "__class__": "BaseModel"
+    },
+    "Place.4fe16977-dd91-44a4-82f6-8ee9472f3c6c": {
+        "updated_at": "2020-06-30T16:31:35.732103",
+        "number_bathrooms": 4,
+        "__class__": "Place",
+        "longitude": 108.9,
+        "latitude": 78.2,
+        "amenity_ids": [
+            "56deq1626",
+            "1727132dhsad"
+        ],
+        "name": "Betty",
+        "city_id": "Medellin987",
+        "description": "Soleado",
+        "price_by_night": 305678,
+        "user_id": "Conforte",
+        "id": "4fe16977-dd91-44a4-82f6-8ee9472f3c6c",
+        "created_at": "2020-06-30T16:31:35.732076",
+        "max_guest": 245,
+        "number_rooms": 18
+    },
+    "State.4b5f32ef-f0c6-4d09-aeed-b3a0ddeef2f2": {
+        "id": "4b5f32ef-f0c6-4d09-aeed-b3a0ddeef2f2",
+        "created_at": "2020-06-30T16:31:35.754907",
+        "updated_at": "2020-06-30T16:31:35.754912",
+        "__class__": "State",
+        "name": "Marlon"
+    },
+    "BaseModel.58cd8b6e-8886-48af-af5b-6ffd4aa160d6": {
+        "updated_at": "2020-06-30T16:30:47.327737",
+        "id": "58cd8b6e-8886-48af-af5b-6ffd4aa160d6",
+        "__class__": "BaseModel",
+        "created_at": "2020-06-30T16:30:47.327726"
+    },
+    "User.b15fcb6d-d28d-4484-942e-0da275aa96f9": {
+        "updated_at": "2020-06-30T16:31:14.571996",
+        "first_name": "Betty",
+        "last_name": "Holberton",
+        "password": "root",
+        "id": "b15fcb6d-d28d-4484-942e-0da275aa96f9",
+        "created_at": "2020-06-30T16:31:14.571990",
+        "email": "airbnb2@holbertonshool.com",
+        "__class__": "User"
+    },
+    "Place.3b0ff9a9-732f-43fc-80e4-edec992de942": {
+        "updated_at": "2020-06-30T16:31:35.740435",
+        "number_bathrooms": 4,
+        "__class__": "Place",
+        "longitude": 108.9,
+        "latitude": 78.2,
+        "amenity_ids": [
+            "56deq1626",
+            "1727132dhsad"
+        ],
+        "name": "Betty",
+        "city_id": "Medellin987",
+        "description": "Soleado",
+        "price_by_night": 305678,
+        "user_id": "Conforte",
+        "id": "3b0ff9a9-732f-43fc-80e4-edec992de942",
+        "created_at": "2020-06-30T16:31:35.740402",
+        "max_guest": 245,
+        "number_rooms": 18
+    },
+    "BaseModel.b662df54-052e-4af5-9889-4d794ffaf4dc": {
+        "updated_at": "2020-06-30T16:30:47.334443",
+        "id": "b662df54-052e-4af5-9889-4d794ffaf4dc",
+        "__class__": "BaseModel",
+        "created_at": "2020-06-30T16:30:47.334437"
+    },
+    "BaseModel.dbad12ce-f2e7-41c7-b259-5d6b0f937495": {
+        "id": "dbad12ce-f2e7-41c7-b259-5d6b0f937495",
+        "created_at": "2020-06-30T16:31:35.702838",
+        "updated_at": "2020-06-30T16:31:35.702849",
+        "__class__": "BaseModel"
+    },
+    "BaseModel.b6ca0d64-5f35-49db-8ae4-fcaa5d0925d8": {
+        "updated_at": "2020-06-30T16:31:14.503238",
+        "id": "b6ca0d64-5f35-49db-8ae4-fcaa5d0925d8",
+        "__class__": "BaseModel",
+        "created_at": "2020-06-30T16:31:14.503236"
+    },
+    "BaseModel.741efbbb-04bd-4285-be06-803919c77f8b": {
+        "id": "741efbbb-04bd-4285-be06-803919c77f8b",
+        "created_at": "2020-06-30T16:31:35.650282",
+        "updated_at": "2020-06-30T16:31:35.650303",
+        "__class__": "BaseModel"
+    },
+    "State.5bdc6f87-00a3-4c96-bc85-fa4477d70150": {
+        "updated_at": "2020-06-30T16:30:47.382375",
+        "name": "Marlon",
+        "__class__": "State",
+        "id": "5bdc6f87-00a3-4c96-bc85-fa4477d70150",
+        "created_at": "2020-06-30T16:30:47.382368"
+    },
+    "City.0b73b2a8-3ef1-4385-b47d-57525b293d5e": {
+        "updated_at": "2020-06-30T16:31:35.731692",
+        "name": "Julien",
+        "id": "0b73b2a8-3ef1-4385-b47d-57525b293d5e",
+        "created_at": "2020-06-30T16:31:35.731682",
+        "state": "Antioquia",
+        "__class__": "City"
+    },
+    "User.aae6700e-5890-48fa-b0a7-16ca32599683": {
+        "updated_at": "2020-06-30T16:30:47.389511",
+        "first_name": "Betty",
+        "last_name": "Holberton",
+        "password": "root",
+        "id": "aae6700e-5890-48fa-b0a7-16ca32599683",
+        "created_at": "2020-06-30T16:30:47.389504",
+        "email": "airbnb2@holbertonshool.com",
+        "__class__": "User"
+    },
+    "Place.80646c2a-defb-4d9c-a835-52781fea7194": {
+        "updated_at": "2020-06-30T16:31:35.733305",
+        "number_bathrooms": 4,
+        "__class__": "Place",
+        "longitude": 108.9,
+        "latitude": 78.2,
+        "amenity_ids": [
+            "56deq1626",
+            "1727132dhsad"
+        ],
+        "name": "Betty",
+        "city_id": "Medellin987",
+        "description": "Soleado",
+        "price_by_night": 305678,
+        "user_id": "Conforte",
+        "id": "80646c2a-defb-4d9c-a835-52781fea7194",
+        "created_at": "2020-06-30T16:31:35.733300",
+        "max_guest": 245,
+        "number_rooms": 18
+    },
+    "BaseModel.1760803b-c81b-4fc3-89da-884d47302b99": {
+        "id": "1760803b-c81b-4fc3-89da-884d47302b99",
+        "created_at": "2020-06-30T16:31:35.702886",
+        "updated_at": "2020-06-30T16:31:35.702888",
+        "__class__": "BaseModel"
+    },
+    "User.3977a588-ab16-4233-b312-96c4687470b7": {
+        "updated_at": "2020-06-30T16:31:14.571723",
+        "first_name": "Betty",
+        "last_name": "Holberton",
+        "password": "root",
+        "id": "3977a588-ab16-4233-b312-96c4687470b7",
+        "created_at": "2020-06-30T16:31:14.571717",
+        "email": "airbnb2@holbertonshool.com",
+        "__class__": "User"
+    },
+    "User.2ea93575-8305-4c04-97b2-8319f82e232c": {
+        "updated_at": "2020-06-30T16:31:14.572152",
+        "first_name": "Betty",
+        "last_name": "Holberton",
+        "password": "root",
+        "id": "2ea93575-8305-4c04-97b2-8319f82e232c",
+        "created_at": "2020-06-30T16:31:14.572145",
+        "email": "airbnb2@holbertonshool.com",
+        "__class__": "User"
+    },
+    "BaseModel.ae50fe4a-3c37-4815-aa21-60eb2acf95c1": {
+        "updated_at": "2020-06-30T16:30:47.334786",
+        "id": "ae50fe4a-3c37-4815-aa21-60eb2acf95c1",
+        "__class__": "BaseModel",
+        "created_at": "2020-06-30T16:30:47.334784"
+    },
+    "User.051c627f-f79d-47ba-83e3-4a35ddcccd5f": {
+        "updated_at": "2020-06-30T16:30:47.390141",
+        "first_name": "Betty",
+        "last_name": "Holberton",
+        "password": "root",
+        "id": "051c627f-f79d-47ba-83e3-4a35ddcccd5f",
+        "created_at": "2020-06-30T16:30:47.390133",
+        "email": "airbnb2@holbertonshool.com",
+        "__class__": "User"
+    },
+    "BaseModel.2433e727-b75b-4f7b-b9a9-493530c8a192": {
+        "updated_at": "2020-06-30T16:31:14.503574",
+        "id": "2433e727-b75b-4f7b-b9a9-493530c8a192",
+        "__class__": "BaseModel",
+        "created_at": "2020-06-30T16:31:14.503572"
+    },
+    "Amenity.d33293d7-a68d-470b-b17f-032424bb8d66": {
+        "updated_at": "2020-06-30T16:31:14.548918",
+        "name": "Deiwin",
+        "__class__": "Amenity",
+        "id": "d33293d7-a68d-470b-b17f-032424bb8d66",
+        "created_at": "2020-06-30T16:31:14.548912"
+    },
+    "BaseModel.5dc1790b-34db-425d-a1ea-8d3a3b0e9f63": {
+        "updated_at": "2020-06-30T16:31:14.478967",
+        "id": "5dc1790b-34db-425d-a1ea-8d3a3b0e9f63",
+        "__class__": "BaseModel",
+        "created_at": "2020-06-30T16:31:14.478942"
+    },
+    "Amenity.2e4b95b2-e908-4645-b09e-57653e174cf4": {
+        "id": "2e4b95b2-e908-4645-b09e-57653e174cf4",
+        "created_at": "2020-06-30T16:31:35.643323",
+        "updated_at": "2020-06-30T16:31:35.643341",
+        "__class__": "Amenity"
+    },
+    "Review.06da765e-9ae0-4962-b452-61f0f9983494": {
+        "updated_at": "2020-06-30T16:30:47.330205",
+        "id": "06da765e-9ae0-4962-b452-61f0f9983494",
+        "__class__": "Review",
+        "created_at": "2020-06-30T16:30:47.330194"
+    },
+    "City.690fc7de-dcd1-460e-a6b0-328dc0db900a": {
+        "updated_at": "2020-06-30T16:30:47.356951",
+        "id": "690fc7de-dcd1-460e-a6b0-328dc0db900a",
+        "name": "Julien",
+        "created_at": "2020-06-30T16:30:47.356946",
+        "state": "Antioquia",
+        "__class__": "City"
+    },
+    "Amenity.0eb3dd0e-a7bf-4858-a515-96c867d682e0": {
+        "updated_at": "2020-06-30T16:31:14.549196",
+        "name": "Deiwin",
+        "__class__": "Amenity",
+        "id": "0eb3dd0e-a7bf-4858-a515-96c867d682e0",
+        "created_at": "2020-06-30T16:31:14.549190"
+    }
+}

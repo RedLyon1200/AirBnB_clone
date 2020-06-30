@@ -7,6 +7,7 @@ from models.base_model import BaseModel
 from models.amenity import Amenity
 import os
 
+
 class TestAmenity(unittest.TestCase):
     """
     Args:
