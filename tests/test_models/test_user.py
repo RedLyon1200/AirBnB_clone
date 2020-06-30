@@ -26,7 +26,7 @@ class TestUser(unittest.TestCase):
         """delete instance"""
         del self.u1
         try:
-            remove("file.json")
+            os.remove("file.json")
         except FileNotFoundError:
             pass
 

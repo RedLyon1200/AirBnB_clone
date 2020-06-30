@@ -3,7 +3,6 @@
 import models
 from models.base_model import BaseModel
 from models.amenity import Amenity
-from time import sleep
 import os
 import pep8
 import unittest
@@ -55,16 +54,12 @@ class TestAmenity(unittest.TestCase):
 
     def test_attr_type(self):
         """Test attr_type"""
-        self.assertIsInstance(self.a1.id, str)
         self.assertIsInstance(self.a1.name, str)
 
     def test_save(self):
         """Test save"""
-        before_update = self.a1.updated_at
-        sleep(1.5)
         self.a1.save()
-
-        self.assertNotEqual(self.a1.updated_at, before_update)
+        self.assertNotEqual(self.a1.created_at, self.a1.updated_at)
 
     def test_to_dict(self):
         """Test to_dict"""

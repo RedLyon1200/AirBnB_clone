@@ -51,6 +51,7 @@ class TestPlace(unittest.TestCase):
     def test_instance(self):
         """Test instance"""
         self.assertIsInstance(self.p1, Place)
+        self.assertIsInstance(self.p1, BaseModel)
 
     def test_is_subclass(self):
         """Test is_subclass"""
@@ -75,7 +76,6 @@ class TestPlace(unittest.TestCase):
 
     def test_attr_type(self):
         """Test attr_type"""
-        self.assertIsInstance(self.p1.id, str)
         self.assertIsInstance(self.p1.city_id, str)
         self.assertIsInstance(self.p1.user_id, str)
         self.assertIsInstance(self.p1.name, str)
@@ -90,11 +90,8 @@ class TestPlace(unittest.TestCase):
 
     def test_save(self):
         """Test save"""
-        before_update = self.p1.updated_at
-        sleep(1.5)
         self.p1.save()
-
-        self.assertNotEqual(self.p1.updated_at, before_update)
+        self.assertNotEqual(self.p1.created_at, self.p1.updated_at)
 
     def test_to_dict(self):
         """Test to_dict"""

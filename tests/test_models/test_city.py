@@ -42,6 +42,7 @@ class TestCity(unittest.TestCase):
     def test_instance(self):
         """Test instance"""
         self.assertIsInstance(self.c1, City)
+        self.assertIsInstance(self.c1, BaseModel)
 
     def test_is_subclass(self):
         """Test is_subclass"""
@@ -57,17 +58,13 @@ class TestCity(unittest.TestCase):
 
     def test_attr_type(self):
         """Test attr_type"""
-        self.assertIsInstance(self.c1.id, str)
         self.assertIsInstance(self.c1.name, str)
         self.assertIsInstance(self.c1.state, str)
 
     def test_save(self):
         """Test save"""
-        before_update = self.c1.updated_at
-        sleep(1.5)
         self.c1.save()
-
-        self.assertNotEqual(self.c1.updated_at, before_update)
+        self.assertNotEqual(self.c1.created_at, self.c1.updated_at)
 
     def test_to_dict(self):
         """Test to_dict"""

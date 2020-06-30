@@ -41,6 +41,7 @@ class TestReview(unittest.TestCase):
     def test_instance(self):
         """Test instance"""
         self.assertIsInstance(self.r1, Review)
+        self.assertIsInstance(self.r1, BaseModel)
 
     def test_is_subclass(self):
         """Test is_subclass"""
@@ -55,16 +56,12 @@ class TestReview(unittest.TestCase):
 
     def test_attr_type(self):
         """Test attr_type"""
-        self.assertIsInstance(self.r1.id, str)
         self.assertIsInstance(self.r1.name, str)
 
     def test_save(self):
         """Test save"""
-        before_update = self.r1.updated_at
-        sleep(1.5)
         self.r1.save()
-
-        self.assertNotEqual(self.r1.updated_at, before_update)
+        self.assertNotEqual(self.r1.created_at, self.r1.updated_at)
 
     def test_to_dict(self):
         """Test to_dict"""
