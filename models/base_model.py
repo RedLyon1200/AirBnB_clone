@@ -21,13 +21,13 @@ class BaseModel:
 
         if kwargs:
             for key, value in kwargs.items():
-                if 'created_at' is key:
+                if 'created_at' == key:
                     self.__dict__['created_at'] = datetime.strptime(
                         kwargs.get('created_at'), self.format_date)
-                elif 'updated_at' is key:
+                elif 'updated_at' == key:
                     self.__dict__['updated_at'] = datetime.strptime(
                         kwargs.get('updated_at'), self.format_date)
-                elif '__class__' is key:
+                elif '__class__' == key:
                     pass
                 else:
                     self.__dict__[key] = value
