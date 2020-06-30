@@ -34,11 +34,11 @@ class TestState(unittest.TestCase):
         except FileNotFoundError:
             pass
 
-    def test_style_check(self):
-        """tests pep8 style"""
-        style = pep8.StyleGuide(quiet=True)
-        p = style.check_files(['models/engine/file_storage.py'])
-        self.assertEqual(p.total_errors, 0, "fix pep8")
+    def test_base_pep8(self):
+        """Test for pep8"""
+        pep8style = pep8.StyleGuide(quiet=True)
+        result = pep8style.check_files(['./models/user.py'])
+        self.assertEqual(result.total_errors, 0)
 
     def test_docstring(self):
         """test doc in the file"""
