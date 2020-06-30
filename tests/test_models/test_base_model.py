@@ -11,10 +11,7 @@ from time import sleep
 
 
 class TestBaseModel(unittest.TestCase):
-    """
-    Class TestBaseModels:
-                    unittest (unittes): [test of my class basemodels]
-    """
+
     name = "Holberton"
     my_number = 45
 

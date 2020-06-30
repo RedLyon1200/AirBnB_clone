@@ -1,12 +1,18 @@
 #!/usr/bin/python3
 """Unit test for class Place"""
-import models
-from models.base_model import BaseModel
-from models.place import Place
-import os
-import pep8
 import unittest
-from time import sleep
+import json
+import pep8
+import os
+from models.base_model import BaseModel
+from models.amenity import Amenity
+from models.city import City
+from models.place import Place
+from models.state import State
+from models.review import Review
+from models.user import User
+from models.engine.file_storage import FileStorage
+
 
 
 class TestPlace(unittest.TestCase):
@@ -57,22 +63,16 @@ class TestPlace(unittest.TestCase):
         """Test is_subclass"""
         self.assertTrue(issubclass(self.p1.__class__, BaseModel), True)
 
-    def test_has_attr(self):
-        """Test has attr"""
-        self.assertTrue('id' in self.p1.__dict__)
-        self.assertTrue('created_at' in self.p1.__dict__)
-        self.assertTrue('updated_at' in self.p1.__dict__)
-        self.assertTrue('city_id' in self.p1.__dict__)
-        self.assertTrue('user_id' in self.p1.__dict__)
-        self.assertTrue('name' in self.p1.__dict__)
-        self.assertTrue('description' in self.p1.__dict__)
-        self.assertTrue('number_rooms' in self.p1.__dict__)
-        self.assertTrue('number_bathrooms' in self.p1.__dict__)
-        self.assertTrue('max_guest' in self.p1.__dict__)
-        self.assertTrue('price_by_night' in self.p1.__dict__)
-        self.assertTrue('latitude' in self.p1.__dict__)
-        self.assertTrue('longitude' in self.p1.__dict__)
-        self.assertTrue('amenity_ids' in self.p1.__dict__)
+    def test_has_attributes(self):
+        """check that all class attribute have appropriate values"""
+        self.p1.save()
+        p1_json = self.p1.to_dict()
+        my_new_user = User(**p1_json)
+        self.assertEqual(my_new_user.id, self.p1.id)
+        self.assertEqual(my_new_user.created_at, self.p1.created_at)
+        self.assertEqual(my_new_user.updated_at, self.p1.updated_at)
+        self.assertIsNot(self.p1, my_new_user)
+
 
     def test_attr_type(self):
         """Test attr_type"""

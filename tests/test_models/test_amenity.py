@@ -1,18 +1,21 @@
 #!/usr/bin/python3
 """Unit test for class Amenity"""
-import models
+import unittest
+import json
+import pep8
+import os
 from models.base_model import BaseModel
 from models.amenity import Amenity
-import os
-import pep8
-import unittest
+from models.city import City
+from models.place import Place
+from models.state import State
+from models.review import Review
+from models.user import User
+from models.engine.file_storage import FileStorage
+
 
 
 class TestAmenity(unittest.TestCase):
-    """
-    Args:
-            unittest ([type]): [description]
-    """
 
     def setUp(self):
         """Reload object"""
@@ -45,12 +48,16 @@ class TestAmenity(unittest.TestCase):
         """Test is_subclass"""
         self.assertTrue(issubclass(self.a1.__class__, BaseModel), True)
 
-    def test_has_attr(self):
-        """Test has attr"""
-        self.assertTrue('id' in self.a1.__dict__)
-        self.assertTrue('created_at' in self.a1.__dict__)
-        self.assertTrue('updated_at' in self.a1.__dict__)
-        self.assertTrue('name' in self.a1.__dict__)
+    def test_has_attributes(self):
+        """check that all class attribute have appropriate values"""
+        self.a1.save()
+        a1_json = self.a1.to_dict()
+        my_new_user = User(**a1_json)
+        self.assertEqual(my_new_user.id, self.a1.id)
+        self.assertEqual(my_new_user.created_at, self.a1.created_at)
+        self.assertEqual(my_new_user.updated_at, self.a1.updated_at)
+        self.assertIsNot(self.a1, my_new_user)
+
 
     def test_attr_type(self):
         """Test attr_type"""

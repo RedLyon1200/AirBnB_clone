@@ -1,12 +1,18 @@
 #!/usr/bin/python3
 """Unit test for class State"""
-import models
-from models.base_model import BaseModel
-from models.state import State
-import os
-import pep8
 import unittest
-from time import sleep
+import json
+import pep8
+import os
+from models.base_model import BaseModel
+from models.amenity import Amenity
+from models.city import City
+from models.place import Place
+from models.state import State
+from models.review import Review
+from models.user import User
+from models.engine.file_storage import FileStorage
+
 
 
 class TestState(unittest.TestCase):
@@ -47,12 +53,16 @@ class TestState(unittest.TestCase):
         """Test is_subclass"""
         self.assertTrue(issubclass(self.s1.__class__, BaseModel), True)
 
-    def test_has_attr(self):
-        """Test has attr"""
-        self.assertTrue('id' in self.s1.__dict__)
-        self.assertTrue('created_at' in self.s1.__dict__)
-        self.assertTrue('updated_at' in self.s1.__dict__)
-        self.assertTrue('name' in self.s1.__dict__)
+    def test_has_attributes(self):
+        """check that all class attribute have appropriate values"""
+        self.s1.save()
+        s1_json = self.s1.to_dict()
+        my_new_user = User(**s1_json)
+        self.assertEqual(my_new_user.id, self.s1.id)
+        self.assertEqual(my_new_user.created_at, self.s1.created_at)
+        self.assertEqual(my_new_user.updated_at, self.s1.updated_at)
+        self.assertIsNot(self.s1, my_new_user)
+
 
     def test_attr_type(self):
         """Test attr_type"""
