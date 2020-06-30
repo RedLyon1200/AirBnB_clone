@@ -28,7 +28,6 @@ class TestPlace(unittest.TestCase):
         self.p1.longitude = 108.9
         self.p1.amenity_ids = ["56deq1626", "1727132dhsad"]
 
-
     def test_pep8(self):
         """test pep8"""
         fchecker = pep8.Checker('models/amenity.py', show_source=True)
@@ -63,7 +62,6 @@ class TestPlace(unittest.TestCase):
         self.assertTrue('latitude' in self.p1.__dict__)
         self.assertTrue('longitude' in self.p1.__dict__)
         self.assertTrue('amenity_ids' in self.p1.__dict__)
-
 
     def test_attr_type(self):
         """Test attr_type"""

@@ -17,7 +17,6 @@ class TestAmenity(unittest.TestCase):
         """Reload object"""
         self.a1 = Amenity()
         self.a1.name = "Deiwin"
- 
 
     def test_pep8(self):
         """test pep8"""

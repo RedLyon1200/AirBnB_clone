@@ -17,7 +17,6 @@ class TestState(unittest.TestCase):
         """Reload object"""
         self.s1 = State()
         self.s1.name = "Marlon"
- 
 
     def test_pep8(self):
         """test pep8"""
