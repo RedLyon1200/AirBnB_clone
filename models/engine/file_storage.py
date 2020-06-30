@@ -51,8 +51,8 @@ class FileStorage:
                     a_dict = json.load(a_file)
                     for key, value in a_dict.items():
                         if value.get('__class__') in models.classes:
-                            method = value.get('__class__')
-                            self.__objects[key] = eval(method)(**value)
+                            methd = value.get('__class__')
+                            self.__objects[key] = eval(str(methd))(a_dict[key])
                 except Exception as ex:
                     print('An error occurred:\n\n{}'.format(ex))
                     exit(-1)
