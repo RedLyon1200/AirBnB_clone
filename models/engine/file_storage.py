@@ -51,4 +51,4 @@ class FileStorage:
                     for key, value in a_dict.items():
                         if value.get('__class__') in models.classes:
                             methd = value.get('__class__')
-                            self.__objects[key] = eval(str(methd))(a_dict[key])
+                            FileStorage.__objects[key] = eval(methd)(**value)
