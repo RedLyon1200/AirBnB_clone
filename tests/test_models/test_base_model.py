@@ -7,6 +7,7 @@ import models
 from models.base_model import BaseModel
 import pep8
 import unittest
+from time import sleep
 
 
 class TestBaseModel(unittest.TestCase):
@@ -79,6 +80,7 @@ class TestBaseModel(unittest.TestCase):
     def test_save(self):
         """Test save update date"""
         before_update = self.b1.updated_at
+        sleep(1.5)
         self.b1.save()
         self.assertNotEqual(before_update, self.b1.updated_at)
 

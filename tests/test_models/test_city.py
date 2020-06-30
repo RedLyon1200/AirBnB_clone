@@ -6,6 +6,7 @@ from models.city import City
 import os
 import pep8
 import unittest
+from time import sleep
 
 
 class TestCity(unittest.TestCase):
@@ -63,6 +64,7 @@ class TestCity(unittest.TestCase):
     def test_save(self):
         """Test save"""
         before_update = self.c1.updated_at
+        sleep(1.5)
         self.c1.save()
 
         self.assertNotEqual(self.c1.updated_at, before_update)

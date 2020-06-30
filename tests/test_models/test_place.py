@@ -6,6 +6,7 @@ from models.place import Place
 import os
 import pep8
 import unittest
+from time import sleep
 
 
 class TestPlace(unittest.TestCase):
@@ -90,6 +91,7 @@ class TestPlace(unittest.TestCase):
     def test_save(self):
         """Test save"""
         before_update = self.p1.updated_at
+        sleep(1.5)
         self.p1.save()
 
         self.assertNotEqual(self.p1.updated_at, before_update)

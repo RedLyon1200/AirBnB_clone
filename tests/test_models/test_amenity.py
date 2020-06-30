@@ -3,6 +3,7 @@
 import models
 from models.base_model import BaseModel
 from models.amenity import Amenity
+from time import sleep
 import os
 import pep8
 import unittest
@@ -60,6 +61,7 @@ class TestAmenity(unittest.TestCase):
     def test_save(self):
         """Test save"""
         before_update = self.a1.updated_at
+        sleep(1.5)
         self.a1.save()
 
         self.assertNotEqual(self.a1.updated_at, before_update)
