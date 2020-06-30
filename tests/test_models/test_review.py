@@ -28,11 +28,11 @@ class TestReview(unittest.TestCase):
         except FileNotFoundError:
             pass
 
-    def test_pep8(self):
-        """test pep8"""
-        fchecker = pep8.Checker('models/review.py', show_source=True)
-        file_errors = fchecker.check_all()
-        print("Found %s errors (and warnings)" % file_errors)
+    def test_style_check(self):
+        """tests pep8 style"""
+        style = pep8.StyleGuide(quiet=True)
+        p = style.check_files(['models/engine/file_storage.py'])
+        self.assertEqual(p.total_errors, 0, "fix pep8")
 
     def test_docstring(self):
         """test doc in the file"""
