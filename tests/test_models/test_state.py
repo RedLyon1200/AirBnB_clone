@@ -1,11 +1,11 @@
 #!/usr/bin/python3
 """Unit test for class State"""
-import unittest
-import pep8
 import models
 from models.base_model import BaseModel
 from models.state import State
 import os
+import pep8
+import unittest
 
 
 class TestState(unittest.TestCase):
@@ -67,6 +67,7 @@ class TestState(unittest.TestCase):
     def test_to_dict(self):
         """Test to_dict"""
         self.assertEqual('to_dict' in dir(self.s1), True)
+
 
 if __name__ == '__main__':
     unittest.main()

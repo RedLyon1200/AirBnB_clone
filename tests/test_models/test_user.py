@@ -1,11 +1,11 @@
 #!/usr/bin/python3
 """Unit test for class User"""
-import unittest
-import pep8
 import models
 from models.base_model import BaseModel
 from models.user import User
 import os
+import pep8
+import unittest
 
 
 class TestUser(unittest.TestCase):
@@ -22,7 +22,6 @@ class TestUser(unittest.TestCase):
         self.u1.email = "airbnb2@holbertonshool.com"
         self.u1.password = "root"
 
- 
     def tearDown(self):
         """delete instance"""
         del self.u1
@@ -77,6 +76,7 @@ class TestUser(unittest.TestCase):
     def test_to_dict(self):
         """Test to_dict"""
         self.assertEqual('to_dict' in dir(self.u1), True)
+
 
 if __name__ == '__main__':
     unittest.main()

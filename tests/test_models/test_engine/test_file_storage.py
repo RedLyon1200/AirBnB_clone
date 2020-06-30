@@ -1,18 +1,18 @@
 #!/usr/bin/python3
 """Unittest for class FileStorage
 """
-import unittest
 import models
 from models import storage
-from models.base_model import BaseModel
-from models.user import User
-from models.state import State
-from models.city import City
 from models.amenity import Amenity
+from models.base_model import BaseModel
+from models.city import City
+from models.engine.file_storage import FileStorage
 from models.place import Place
 from models.review import Review
-from models.engine.file_storage import FileStorage
+from models.state import State
+from models.user import User
 import os
+import unittest
 
 
 class TestFileStorage(unittest.TestCase):
@@ -23,6 +23,12 @@ class TestFileStorage(unittest.TestCase):
         self.objects = FileStorage._FileStorage__objects
         self.file = FileStorage._FileStorage__file_path
 
+    def tearDown(self):
+        """delete JSON file"""
+        try:
+            os.remove("file.json")
+        except FileNotFoundError:
+            pass
 
     def test_objects(self):
         """Type of __objects"""
@@ -59,7 +65,7 @@ class TestBaseModelFileStorage(unittest.TestCase):
         self.file = FileStorage._FileStorage__file_path
         self.b1 = BaseModel()
         self.b1.save()
-    
+
     def tearDown(self):
         """delete instance"""
         del self.b1
@@ -268,3 +274,7 @@ class TestReviewFileStorage(unittest.TestCase):
         for value in self.objects.values():
             self.assertTrue(value, r1_dict)
         """ self.assertIn(r1_dict, self.objects.values()) """
+
+
+if __name__ == '__main__':
+    unittest.main()
