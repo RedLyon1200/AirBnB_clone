@@ -22,6 +22,7 @@ class TestFileStorage(unittest.TestCase):
         self.objects = FileStorage._FileStorage__objects
         self.file = FileStorage._FileStorage__file_path
 
+
     def test_objects(self):
         """Type of __objects"""
         self.assertTrue(isinstance(self.objects, dict))
@@ -57,6 +58,14 @@ class TestBaseModelFileStorage(unittest.TestCase):
         self.file = FileStorage._FileStorage__file_path
         self.b1 = BaseModel()
         self.b1.save()
+    
+    def tearDown(self):
+        """delete instance"""
+        del self.b1
+        try:
+            os.remove("file.json")
+        except FileNotFoundError:
+            pass
 
     def test_basemodel_object_update(self):
         """Try adding new objects"""
@@ -81,6 +90,14 @@ class TestUserFileStorage(unittest.TestCase):
         self.u1.save()
         self.assertIn('User.{}'.format(self.u1.id), self.objects.keys())
 
+    def tearDown(self):
+        """delete instance"""
+        del self.u1
+        try:
+            os.remove("file.json")
+        except FileNotFoundError:
+            pass
+
     def test_user_dict(self):
         """Test whether new User objects' dicts get added to __objects"""
         u1_dict = self.u1.to_dict()
@@ -100,6 +117,14 @@ class TestStateFileStorage(unittest.TestCase):
         self.file = FileStorage._FileStorage__file_path
         self.s1 = State()
         self.s1.save()
+
+    def tearDown(self):
+        """delete instance"""
+        del self.s1
+        try:
+            os.remove("file.json")
+        except FileNotFoundError:
+            pass
 
     def test_state_object_update(self):
         """Test whether new State objects get added to __objects"""
@@ -126,6 +151,14 @@ class TestCityFileStorage(unittest.TestCase):
         self.c1 = City()
         self.c1.save()
 
+    def tearDown(self):
+        """delete instance"""
+        del self.c1
+        try:
+            os.remove("file.json")
+        except FileNotFoundError:
+            pass
+
     def test_city_object_update(self):
         """Test whether new City objects get added to __objects"""
         self.assertIn('City.{}'.format(self.c1.id), self.objects.keys())
@@ -149,6 +182,14 @@ class TestAmenityFileStorage(unittest.TestCase):
         self.file = FileStorage._FileStorage__file_path
         self.a1 = Amenity()
         self.a1.save()
+
+    def tearDown(self):
+        """delete instance"""
+        del self.a1
+        try:
+            os.remove("file.json")
+        except FileNotFoundError:
+            pass
 
     def test_amenity_object_update(self):
         """Test whether new Amenity objects get added to __objects"""
@@ -175,6 +216,14 @@ class TestPlaceFileStorage(unittest.TestCase):
         self.p1 = Place()
         self.p1.save()
 
+    def tearDown(self):
+        """delete instance"""
+        del self.p1
+        try:
+            os.remove("file.json")
+        except FileNotFoundError:
+            pass
+
     def test_place_object_update(self):
         """Test whether new Place objects get added to __objects"""
         self.assertIn('Place.{}'.format(self.p1.id), self.objects.keys())
@@ -199,6 +248,14 @@ class TestReviewFileStorage(unittest.TestCase):
         self.file = FileStorage._FileStorage__file_path
         self.r1 = Review()
         self.r1.save()
+
+    def tearDown(self):
+        """delete instance"""
+        del self.r1
+        try:
+            os.remove("file.json")
+        except FileNotFoundError:
+            pass
 
     def test_review_object_update(self):
         """Test whether new Review objects get added to __objects"""
