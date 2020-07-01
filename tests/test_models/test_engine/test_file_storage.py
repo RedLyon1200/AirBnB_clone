@@ -56,9 +56,20 @@ class TestFileStorage(unittest.TestCase):
         models.storage.new(model)
         self.assertTrue(length == len(self.objects))
 
-    def test_reload(self):
-        """Reloads the object"""
-        self.assertTrue(isinstance(self.objects, dict))
+    def test_reload_empty(self):
+        """ Tests method: reload (reloads objects from string file)
+        """
+        a_storage = FileStorage()
+        try:
+            os.remove("file.json")
+        except Exception:
+            pass
+        with open("file.json", "w") as f:
+            f.write("{}")
+        with open("file.json", "r") as r:
+            for line in r:
+                self.assertEqual(line, "{}")
+        self.assertIs(a_storage.reload(), None)
 
     def test_all(self):
         """Reloads the object"""
@@ -101,18 +112,6 @@ class TestBaseModelFileStorage(unittest.TestCase):
         b1_dict = b1.all()
         self.assertEqual(type(b1_dict), dict)
         self.assertIs(b1_dict, b1._FileStorage__objects)
-
-    def test_new(self):
-        """ Tests method: new """
-        m_storage = FileStorage()
-        instances_dic = m_storage.all()
-        user1 = User()
-        user1.id = 1234234
-        user1.name = "Snatiago"
-        m_storage.new(user1)
-        key = user1.__class__.__name__ + "." + str(user1.id)
-        self.assertIsNotNone(instances_dic[key])
-
 
 
 class TestUserFileStorage(unittest.TestCase):
