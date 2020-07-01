@@ -13,6 +13,7 @@ from models.state import State
 from models.user import User
 import pep8
 from os import remove
+import os
 import unittest
 
 
@@ -24,12 +25,6 @@ class TestFileStorage(unittest.TestCase):
         self.objects = FileStorage._FileStorage__objects
         self.file = FileStorage._FileStorage__file_path
 
-    def tearDown(self):
-        """delete JSON file"""
-        try:
-            remove("file.json")
-        except FileNotFoundError:
-            pass
 
     def test_pep8(self):
         """test pep8"""
