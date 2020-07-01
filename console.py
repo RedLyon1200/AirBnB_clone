@@ -74,25 +74,21 @@ class HBNBCommand(cmd.Cmd):
     """
     prompt = '(hbtn) '
 
-    def do_quit(self, arg):
-        """quit: quit
-    Quit the console.
-
-    Quits the console with not status.
-
-    Exit Status:
-    Returns true whenever the quit signal is detected."""
+    def do_EOF(self, line):
+        """End of line: Exit the program"""
         return True
-
-    def do_EOF(self, arg):
-        """EOF: ^C
-    Exit the console.
-
-    Exits the console with not status.
-
-    Exit Status:
-    Returns true each time the keyboard interrupt signal is detected."""
+ 
+    def do_quit(self, line):
+        """Quit: Exit the program"""
         return True
+ 
+    def help_quit(self):
+        """Help for command help_quit"""
+        print("Quit command to exit the program")
+ 
+    def emptyline(self):
+        """Empty line + enter"""
+        pass
 
     def do_create(self, arg):
         """create: create CLASS_NAME
@@ -185,13 +181,6 @@ the ATTR_NAME (the change is saved in the JSON file)."""
                 setattr(stored_dict[key], attr, value)
                 print(stored_dict[key])
                 models.storage.save()
-
-    def emptyline(self):
-        """emptyline:
-    empty line
-
-    if an empty line is sent through ENTER the program does nothing."""
-        return False
 
 
 if __name__ == "__main__":
