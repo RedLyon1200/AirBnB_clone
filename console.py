@@ -186,6 +186,33 @@ the ATTR_NAME (the change is saved in the JSON file)."""
                 print(stored_dict[key])
                 models.storage.save()
 
+    def default(self, arg):
+        """default: default CLASS_NAME"""
+        args = shlex.split(arg)
+
+        args = (arg.strip('()')).split('.')
+        new_arg = (args[1].strip('"')).split('"')
+        new_arg.append(args[0])
+        print(new_args)
+        if args[0] in classes:
+
+            new_args = 'do_' + args[1]
+            if new_args == 'do_all':
+                self.do_all(args[0])
+            elif new_args == 'do_count':
+                self.do_count(args[0])
+        else:
+            print(self.errors['id_not_found'])
+
+    def do_count(self, arg):
+        """count: count CLASS_NAME ID"""
+        instances = 0
+        for key, value in models.storage.all().items():
+            value = value.to_dict()
+            if value['__class__'] == arg:
+                instances += 1
+        print(instances)
+
     def emptyline(self):
         """emptyline:
     empty line
