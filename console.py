@@ -48,9 +48,6 @@ class HBNBCommand(cmd.Cmd):
     Returns true each time the keyboard interrupt signal is detected."""
         return True
 
-    """ def do_help(self, arg):
-        print(arg) """
-
     def do_create(self, arg):
         """create: create CLASS_NAME
     Instantiate classes
