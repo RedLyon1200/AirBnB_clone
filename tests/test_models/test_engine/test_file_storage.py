@@ -56,35 +56,6 @@ class TestFileStorage(unittest.TestCase):
         models.storage.new(model)
         self.assertTrue(length == len(self.objects))
 
-    def test_reload_empty(self):
-        """ Tests method: reload (reloads objects from string file)
-        """
-        a_storage = FileStorage()
-        try:
-            os.remove("file.json")
-        except Exception:
-            pass
-        with open("file.json", "w") as f:
-            f.write("{}")
-        with open("file.json", "r") as r:
-            for line in r:
-                self.assertEqual(line, "{}")
-        self.assertIs(a_storage.reload(), None)
-    
-    def test_errs(self):
-        """Test most mal usage of FileStorage methods"""
-        b1 = BaseModel()
-        with self.assertRaises(AttributeError):
-            FileStorage.__objects
-            FileStorage.__File_path
-
-        with self.assertRaises(TypeError):
-            models.storage.new()
-            models.storage.new(self, b1)
-            models.save(b1)
-            models.reload(b1)
-            models.all(b1)
-
     def test_all(self):
         """Reloads the object"""
         self.assertTrue(isinstance(self.objects, dict))
