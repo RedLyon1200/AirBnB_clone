@@ -93,6 +93,15 @@ class TestBaseModelFileStorage(unittest.TestCase):
     def test_basemodel_object_update(self):
         """Try adding new objects"""
         self.assertIn('BaseModel.{}'.format(self.b1.id), self.objects.keys())
+    
+    def test_fs_instance(self):
+        """FileStorage class save checks, reload checks"""
+        b1 = BaseModel()
+        models.storage.save()
+        self.assertEqual(os.path.exists('file.json'), True)
+
+        models.storage.delete_obj()
+        models.storage.reload()
 
     def test_basemodel_dict(self):
         """Test if new data is added to __objects"""
