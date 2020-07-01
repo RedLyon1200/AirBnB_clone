@@ -15,7 +15,17 @@ import models
 import shlex
 
 
-def validate_id(self, stored_dict, id):
+errors = {
+    'empty': '** class name missing **',
+    'no_cls': '** class doesn\'t exist **',
+    'no_id': '** instance id missing **',
+    'id_not_found': '** no instance found **',
+    'no_attr': '** attribute name missing **',
+    'no_val': '** value missing **'
+}
+
+
+def validate_id(stored_dict, id):
     """validate_id: validate_id(STORED_DICT, ID)
     Review id
 
@@ -27,11 +37,11 @@ def validate_id(self, stored_dict, id):
     if id in stored_dict:
         return True
     else:
-        print(self.errors['id_not_found'])
+        print(errors['id_not_found'])
         return False
 
 
-def validate_args(self, args, update=False):
+def validate_args(args, update=False):
     """validate_args: validate_args(ARGS, [update])
     Check arguments
 
@@ -41,16 +51,16 @@ the validations of the [update].
     Exit Status:
     Returns true if ARGS is correct, otherwise returns False."""
     if len(args) < 1:
-        print(self.errors['empty'])
+        print(errors['empty'])
     elif args[0] not in classes:
-        print(self.errors['no_cls'])
+        print(errors['no_cls'])
     elif len(args) < 2:
-        print(self.errors['no_id'])
+        print(errors['no_id'])
     elif update:
         if len(args) < 3:
-            print(self.errors['no_attr'])
+            print(errors['no_attr'])
         elif len(args) < 4:
-            print(self.errors['no_val'])
+            print(errors['no_val'])
         else:
             return True
     else:
@@ -63,14 +73,6 @@ class HBNBCommand(cmd.Cmd):
     """[This is the htbn cls]
     """
     prompt = '(hbtn) '
-    errors = {
-        'empty': '** class name missing **',
-        'no_cls': '** class doesn\'t exist **',
-        'no_id': '** instance id missing **',
-        'id_not_found': '** no instance found **',
-        'no_attr': '** attribute name missing **',
-        'no_val': '** value missing **'
-    }
 
     def do_quit(self, arg):
         """quit: quit
@@ -101,9 +103,9 @@ print the id. """
         args = arg.split()
 
         if len(args) == 0:
-            print(self.errors['empty'])
+            print(errors['empty'])
         elif args[0] not in classes:
-            print(self.errors['no_cls'])
+            print(errors['no_cls'])
         else:
             obj = classes[args[0]]()
 
@@ -161,7 +163,7 @@ the JSON file)."""
                     instances.append(str(models.storage.all()[keys]))
             print(instances)
         else:
-            print(self.errors['no_cls'])
+            print(errors['no_cls'])
 
     def do_update(self, arg):
         """update: update CLASS_NAME ID ATTR_NAME ATTR_VALUE
