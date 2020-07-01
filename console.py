@@ -191,9 +191,6 @@ the ATTR_NAME (the change is saved in the JSON file)."""
         args = shlex.split(arg)
 
         args = (arg.strip('()')).split('.')
-        new_arg = (args[1].strip('"')).split('"')
-        new_arg.append(args[0])
-        print(new_args)
         if args[0] in classes:
 
             new_args = 'do_' + args[1]
