@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Unit test for class City"""
+""" Unittest for City class """
 import unittest
 import json
 import pep8
@@ -14,61 +14,44 @@ from models.user import User
 from models.engine.file_storage import FileStorage
 
 
-
 class TestCity(unittest.TestCase):
 
     def setUp(self):
-        """Reload object"""
-        self.c1 = City()
-        self.c1.name = "Julien"
-        self.c1.state = "Antioquia"
-
-    def tearDown(self):
-        """delete instance"""
-        del self.c1
-        try:
-            os.remove("file.json")
-        except FileNotFoundError:
-            pass
+        """SetUp method"""
+        self.city1 = City()
+        self.city1.state_id = "ad45ad61as6d1"
+        self.city1.name = "juan"
 
     def test_base_pep8(self):
         """Test for pep8"""
         pep8style = pep8.StyleGuide(quiet=True)
-        result = pep8style.check_files(['./models/user.py'])
+        result = pep8style.check_files(['./models/city.py'])
         self.assertEqual(result.total_errors, 0)
 
     def test_docstring(self):
-        """test doc in the file"""
+        """test docstring in the file"""
         self.assertIsNotNone(City.__doc__)
 
-    def test_instance(self):
-        """Test instance"""
-        self.assertIsInstance(self.c1, Cit
+    def test_is_instance(self):
+        """Test for instantiation"""
+        self.assertIsInstance(self.city1, City)
 
-    def test_is_subclass(self):
-        """Test is_subclass"""
-        self.assertTrue(issubclass(self.c1.__class__, BaseModel), True)
+    def test_attributes(self):
+        """Test to check attributes"""
+        self.city1.save()
+        city1_json = self.city1.to_dict()
+        my_new_city = City(**city1_json)
+        self.assertEqual(my_new_city.id, self.city1.id)
+        self.assertEqual(my_new_city.created_at, self.city1.created_at)
+        self.assertEqual(my_new_city.updated_at, self.city1.updated_at)
+        self.assertIsNot(self.city1, my_new_city)
 
-    def test_has_attributes(self):
-        """check that all class attribute have appropriate values"""
-        self.c1.save()
-        c1_json = self.c1.to_dict()
-        my_new_user = User(**c1_json)
-        self.assertEqual(my_new_user.id, self.c1.id)
-        self.assertEqual(my_new_user.created_at, self.c1.created_at)
-        self.assertEqual(my_new_user.updated_at, self.c1.updated_at)
-        self.assertIsNot(self.c1, my_new_user)
-
+    def test_subclass(self):
+        """Test to check the inheritance"""
+        self.assertTrue(issubclass(self.city1.__class__, BaseModel), True)
 
     def test_save(self):
-        """Test save"""
-        self.c1.save()
-        self.assertNotEqual(self.c1.created_at, self.c1.updated_at)
-
-    def test_to_dict(self):
-        """Test to_dict"""
-        self.assertEqual('to_dict' in dir(self.c1), True)
-
-
-if __name__ == '__main__':
-    unittest.main()
+        """Test to check save method"""
+        variable_update = self.city1.updated_at
+        self.city1.save()
+        self.assertNotEqual(variable_update, self.city1.updated_at)
