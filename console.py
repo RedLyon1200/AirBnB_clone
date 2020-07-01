@@ -75,16 +75,12 @@ class HBNBCommand(cmd.Cmd):
     prompt = '(hbtn) '
 
     def do_EOF(self, line):
-        """End of line: Exit the program"""
+        "Exit the program with Ctrl+D"
         return True
- 
-    def do_quit(self, line):
-        """Quit: Exit the program"""
+
+    def do_quit(slef, line):
+        "Quit command to exit the program"
         return True
- 
-    def help_quit(self):
-        """Help for command help_quit"""
-        print("Quit command to exit the program")
  
     def emptyline(self):
         """Empty line + enter"""
