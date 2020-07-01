@@ -72,13 +72,13 @@ the validations of the [update].
 class HBNBCommand(cmd.Cmd):
     """[This is the htbn cls]
     """
-    prompt = '(hbtn) '
+    prompt = '(hbnb) '
 
-    def do_EOF(self, line):
+    def do_EOF(self, arg):
         "Exit the program with Ctrl+D"
         return True
 
-    def do_quit(slef, line):
+    def do_quit(slef, arg):
         "Quit command to exit the program"
         return True
  
