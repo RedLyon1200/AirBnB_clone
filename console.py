@@ -74,17 +74,25 @@ class HBNBCommand(cmd.Cmd):
     """
     prompt = '(hbnb) '
 
-    def do_EOF(self, arg):
-        "Exit the program with Ctrl+D"
+    def do_quit(self, arg):
+        """quit: quit
+    Quit the console.
+
+    Quits the console with not status.
+
+    Exit Status:
+    Returns true whenever the quit signal is detected."""
         return True
 
-    def do_quit(slef, arg):
-        "Quit command to exit the program"
+    def do_EOF(self, arg):
+        """EOF: ^C
+    Exit the console.
+
+    Exits the console with not status.
+
+    Exit Status:
+    Returns true each time the keyboard interrupt signal is detected."""
         return True
- 
-    def emptyline(self):
-        """Empty line + enter"""
-        pass
 
     def do_create(self, arg):
         """create: create CLASS_NAME
@@ -177,6 +185,13 @@ the ATTR_NAME (the change is saved in the JSON file)."""
                 setattr(stored_dict[key], attr, value)
                 print(stored_dict[key])
                 models.storage.save()
+
+    def emptyline(self):
+        """emptyline:
+    empty line
+
+    if an empty line is sent through ENTER the program does nothing."""
+        return False
 
 
 if __name__ == "__main__":
