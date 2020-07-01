@@ -100,9 +100,6 @@ class TestBaseModelFileStorage(unittest.TestCase):
         models.storage.save()
         self.assertEqual(os.path.exists('file.json'), True)
 
-        models.storage.delete_obj()
-        models.storage.reload()
-
     def test_basemodel_dict(self):
         """Test if new data is added to __objects"""
         b1_dict = self.b1.to_dict()
