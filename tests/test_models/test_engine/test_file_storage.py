@@ -97,9 +97,11 @@ class TestBaseModelFileStorage(unittest.TestCase):
 
     def test_basemodel_dict(self):
         """Test if new data is added to __objects"""
-        b1_dict = self.b1.to_dict()
-        for value in self.objects.values():
-            self.assertTrue(value, b1_dict)
+        b1 = FileStorage()
+        b1_dict = b1.all()
+        self.assertEqual(type(b1_dict), dict)
+        self.assertIs(b1_dict, b1._FileStorage__objects)
+
 
 
 class TestUserFileStorage(unittest.TestCase):
