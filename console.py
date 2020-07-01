@@ -30,6 +30,10 @@ class HBNBCommand(cmd.Cmd):
     Exit Status:
     Returns true whenever the quit signal is detected."""
         return True
+    
+    def help_quit(self):
+        """Help for command help_quit"""
+        print("Quit command to exit the program")
 
     def do_EOF(self, arg):
         """EOF: ^C
