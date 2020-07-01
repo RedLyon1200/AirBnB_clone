@@ -18,8 +18,8 @@ class TestState(unittest.TestCase):
 
     def setUp(self):
         """SetUp method"""
-        self.state1 = State()
-        self.state1.name = "juan"
+        self.s1 = State()
+        self.s1.name = "Agudelo"
 
     def test_base_pep8(self):
         """Test for pep8"""
@@ -28,29 +28,29 @@ class TestState(unittest.TestCase):
         self.assertEqual(result.total_errors, 0)
 
     def test_docstring(self):
-        """test docstring in the file"""
+        """test docstring"""
         self.assertIsNotNone(State.__doc__)
 
     def test_is_instance(self):
         """Test for instantiation"""
-        self.assertIsInstance(self.state1, State)
+        self.assertIsInstance(self.s1, State)
 
     def test_attributes(self):
-        """Test to check attributes"""
-        self.state1.save()
-        state1_json = self.state1.to_dict()
-        my_new_state = State(**state1_json)
-        self.assertEqual(my_new_state.id, self.state1.id)
-        self.assertEqual(my_new_state.created_at, self.state1.created_at)
-        self.assertEqual(my_new_state.updated_at, self.state1.updated_at)
-        self.assertIsNot(self.state1, my_new_state)
+        """Test to attributes"""
+        self.s1.save()
+        s1_json = self.s1.to_dict()
+        my_new_state = State(**s1_json)
+        self.assertEqual(my_new_state.id, self.s1.id)
+        self.assertEqual(my_new_state.created_at, self.s1.created_at)
+        self.assertEqual(my_new_state.updated_at, self.s1.updated_at)
+        self.assertIsNot(self.s1, my_new_state)
 
     def test_subclass(self):
-        """Test to check the inheritance"""
-        self.assertTrue(issubclass(self.state1.__class__, BaseModel), True)
+        """Test to inheritance"""
+        self.assertTrue(issubclass(self.s1.__class__, BaseModel), True)
 
     def test_save(self):
-        """Test to check save method"""
-        variable_update = self.state1.updated_at
-        self.state1.save()
-        self.assertNotEqual(variable_update, self.state1.updated_at)
+        """Test to check save"""
+        variable_update = self.s1.updated_at
+        self.s1.save()
+        self.assertNotEqual(variable_update, self.s1.updated_at)
