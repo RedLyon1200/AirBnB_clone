@@ -102,6 +102,17 @@ class TestBaseModelFileStorage(unittest.TestCase):
         self.assertEqual(type(b1_dict), dict)
         self.assertIs(b1_dict, b1._FileStorage__objects)
 
+    def test_new(self):
+        """ Tests method: new """
+        m_storage = FileStorage()
+        instances_dic = m_storage.all()
+        user1 = User()
+        user1.id = 999999
+        user1.name = "user1"
+        m_storage.new(user1)
+        key = user1.__class__.__name__ + "." + str(user1.id)
+        self.assertIsNotNone(instances_dic[key])
+
 
 
 class TestUserFileStorage(unittest.TestCase):
