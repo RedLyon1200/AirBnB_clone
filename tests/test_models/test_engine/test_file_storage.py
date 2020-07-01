@@ -70,6 +70,20 @@ class TestFileStorage(unittest.TestCase):
             for line in r:
                 self.assertEqual(line, "{}")
         self.assertIs(a_storage.reload(), None)
+    
+    def test_errs(self):
+        """Test most mal usage of FileStorage methods"""
+        b1 = BaseModel()
+        with self.assertRaises(AttributeError):
+            FileStorage.__objects
+            FileStorage.__File_path
+
+        with self.assertRaises(TypeError):
+            models.storage.new()
+            models.storage.new(self, b1)
+            models.save(b1)
+            models.reload(b1)
+            models.all(b1)
 
     def test_all(self):
         """Reloads the object"""
