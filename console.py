@@ -15,6 +15,50 @@ import models
 import shlex
 
 
+def validate_id(self, stored_dict, id):
+    """validate_id: validate_id(STORED_DICT, ID)
+    Review id
+
+    Validate if the STORED_DICT contains the ID.
+
+    Exit Status:
+    Returns true if ARGS is correct, otherwise returns False."""
+
+    if id in stored_dict:
+        return True
+    else:
+        print(self.errors['id_not_found'])
+        return False
+
+
+def validate_args(self, args, update=False):
+    """validate_args: validate_args(ARGS, [update])
+    Check arguments
+
+    Validates the amount and type of ARGS sent and optionally, check or not \
+the validations of the [update].
+
+    Exit Status:
+    Returns true if ARGS is correct, otherwise returns False."""
+    if len(args) < 1:
+        print(self.errors['empty'])
+    elif args[0] not in classes:
+        print(self.errors['no_cls'])
+    elif len(args) < 2:
+        print(self.errors['no_id'])
+    elif update:
+        if len(args) < 3:
+            print(self.errors['no_attr'])
+        elif len(args) < 4:
+            print(self.errors['no_val'])
+        else:
+            return True
+    else:
+        return True
+
+    return False
+
+
 class HBNBCommand(cmd.Cmd):
     """[This is the htbn cls]
     """
@@ -74,10 +118,10 @@ print the id. """
 and ID."""
         args = arg.split()
 
-        if self.validate_args(args):
+        if validate_args(args):
             stored_dict = models.storage.all()
             key = args[0] + '.' + args[1]
-            if self.validate_id(stored_dict, key):
+            if validate_id(stored_dict, key):
                 print(stored_dict[key])
 
     def do_destroy(self, arg):
@@ -88,10 +132,10 @@ and ID."""
 the JSON file)."""
         args = arg.split()
 
-        if self.validate_args(args):
+        if validate_args(args):
             stored_dict = models.storage.all()
             key = args[0] + '.' + args[1]
-            if self.validate_id(stored_dict, key):
+            if validate_id(stored_dict, key):
                 del stored_dict[key]
                 models.storage.save()
 
@@ -127,7 +171,7 @@ the JSON file)."""
 the ATTR_NAME (the change is saved in the JSON file)."""
         args = shlex.split(arg)
 
-        if self.validate_args(args, update=True):
+        if validate_args(args, update=True):
             attr = args[2]
             value = args[3]
 
@@ -135,52 +179,10 @@ the ATTR_NAME (the change is saved in the JSON file)."""
                 return
             stored_dict = models.storage.all()
             key = args[0] + '.' + args[1]
-            if self.validate_id(stored_dict, key):
+            if validate_id(stored_dict, key):
                 setattr(stored_dict[key], attr, value)
                 print(stored_dict[key])
                 models.storage.save()
-
-    def validate_id(self, stored_dict, id):
-        """validate_id: validate_id(STORED_DICT, ID)
-    Review id
-
-    Validate if the STORED_DICT contains the ID.
-
-    Exit Status:
-    Returns true if ARGS is correct, otherwise returns False."""
-
-        if id in stored_dict:
-            return True
-        else:
-            print(self.errors['id_not_found'])
-            return False
-
-    def validate_args(self, args, update=False):
-        """validate_args: validate_args(ARGS, [update])
-    Check arguments
-
-    Validates the amount and type of ARGS sent and optionally, check or not \
-the validations of the [update].
-
-    Exit Status:
-    Returns true if ARGS is correct, otherwise returns False."""
-        if len(args) < 1:
-            print(self.errors['empty'])
-        elif args[0] not in classes:
-            print(self.errors['no_cls'])
-        elif len(args) < 2:
-            print(self.errors['no_id'])
-        elif update:
-            if len(args) < 3:
-                print(self.errors['no_attr'])
-            elif len(args) < 4:
-                print(self.errors['no_val'])
-            else:
-                return True
-        else:
-            return True
-
-        return False
 
     def emptyline(self):
         """emptyline:
