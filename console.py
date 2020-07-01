@@ -1,10 +1,17 @@
 #!/usr/bin/python3
 """[contains the entry point of the command interpreter]
 """
+from datetime import datetime
+from models.amenity import Amenity
+from models.base_model import BaseModel
+from models.city import City
+from models.place import Place
+from models.review import Review
+from models.state import State
+from models.user import User
+from models import classes
 import cmd
 import models
-from models.base_model import BaseModel
-from models import classes
 import shlex
 
 
@@ -30,10 +37,6 @@ class HBNBCommand(cmd.Cmd):
     Exit Status:
     Returns true whenever the quit signal is detected."""
         return True
-    
-    def help_quit(self):
-        """Help for command help_quit"""
-        print("Quit command to exit the program")
 
     def do_EOF(self, arg):
         """EOF: ^C
@@ -44,9 +47,6 @@ class HBNBCommand(cmd.Cmd):
     Exit Status:
     Returns true each time the keyboard interrupt signal is detected."""
         return True
-
-    """ def do_help(self, arg):
-        print(arg) """
 
     def do_create(self, arg):
         """create: create CLASS_NAME
@@ -187,7 +187,7 @@ the validations of the [update].
     empty line
 
     if an empty line is sent through ENTER the program does nothing."""
-        pass
+        return False
 
 
 if __name__ == "__main__":
