@@ -217,6 +217,36 @@ the ATTR_NAME (the change is saved in the JSON file)."""
     if an empty line is sent through ENTER the program does nothing."""
         return False
 
+    def default(self, arg):
+        """ handle new ways of inputing data """
+        commands = {
+            "count": self.do_count,
+            "destroy": self.do_destroy,
+            "show": self.do_show,
+            "all": self.do_all
+        }
+        arg = arg.strip()
+        args = arg.split('.')
+        if len(args) != 2:
+            cmd.Cmd.default(self, arg)
+            return
+        class_name = args[0]
+        console_cmd = args[1].split('(')[0]
+        line = ''
+        try:
+            inputs = args[1].split('(')[1].split(',')
+            for num in range(len(inputs)):
+                if (num != len(inputs) - 1):
+                    line = line + ' ' + shlex.split(inputs[num])[0]
+                else:
+                    line = line + ' ' + shlex.split(inputs[num][0:-1])[0]
+        except IndexError:
+            inputs = ''
+            line = ''
+        line = class_name + line
+        if (console_cmd in commands.keys()):
+            commands[console_cmd](line.strip())
+
 
 if __name__ == "__main__":
     """main entry"""
