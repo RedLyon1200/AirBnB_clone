@@ -117,7 +117,10 @@ print the id. """
     Show classes
 
     Prints the string representation of an instance based on the CLASS_NAME \
-and ID."""
+and ID.
+
+    You can also use:
+    CLASS_NAME.show(ID)"""
         args = arg.split()
 
         if validate_args(args):
@@ -131,7 +134,11 @@ and ID."""
     Remove classes
 
     Deletes an instance based on the CLASS_NAME and ID (save the change into \
-the JSON file)."""
+the JSON file).
+
+
+    You can also use:
+    CLASS_NAME.destroy(ID)"""
         args = arg.split()
 
         if validate_args(args):
@@ -149,7 +156,10 @@ the JSON file)."""
 [class_name].
 
     Options:
-      class_name    shows only the information of said class."""
+      class_name    shows only the information of said class.
+
+    You can also use:
+    CLASS_NAME.all()"""
         args = arg.split()
         instances = []
 
@@ -186,23 +196,14 @@ the ATTR_NAME (the change is saved in the JSON file)."""
                 print(stored_dict[key])
                 models.storage.save()
 
-    def default(self, arg):
-        """default: default CLASS_NAME"""
-        args = shlex.split(arg)
-
-        args = (arg.strip('()')).split('.')
-        if args[0] in classes:
-
-            new_args = 'do_' + args[1]
-            if new_args == 'do_all':
-                self.do_all(args[0])
-            elif new_args == 'do_count':
-                self.do_count(args[0])
-        else:
-            print(self.errors['id_not_found'])
-
     def do_count(self, arg):
-        """count: count CLASS_NAME ID"""
+        """count: count CLASS_NAME
+    class count
+
+    Counts the total number of the CLASS_NAME
+
+    You can also use:
+    CLASS_NAME.count()"""
         instances = 0
         for key, value in models.storage.all().items():
             value = value.to_dict()
@@ -219,6 +220,13 @@ the ATTR_NAME (the change is saved in the JSON file)."""
 
     def default(self, arg):
         """ handle new ways of inputing data """
+
+        """"alternative commands:
+                <clas_name>.count()
+                <clas_name>.destroy(id)
+                <clas_name>.show(id)
+                <clas_name>.all()
+        """
         commands = {
             "count": self.do_count,
             "destroy": self.do_destroy,
