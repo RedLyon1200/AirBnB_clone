@@ -7,7 +7,7 @@ For further information, click on the previous link.
 
 ## Airbnb Clone - Structure
 
-<img width="701" alt="Airbnb Structure" src="![consdole](https://user-images.githubusercontent.com/60367280/86426731-ff7d7e80-bcad-11ea-9ba2-484a6c9a653b.png)">
+![consdole](https://user-images.githubusercontent.com/60367280/86426731-ff7d7e80-bcad-11ea-9ba2-484a6c9a653b.png)
 
 ##### In this project, we implement the following: #####
 
