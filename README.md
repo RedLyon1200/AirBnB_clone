@@ -25,7 +25,7 @@ To start the console, type ./console.py or python3 console.py in the directory c
 $ ./console.py
 `
 `
-(hbnb) 
+(hbnb)
 `
 
 Usage
@@ -57,7 +57,7 @@ $ echo "help" | ./console.py
 Documented commands (type help <topic>):
 ========================================
 EOF  help  quit
-(hbnb) 
+(hbnb)
 $
 $ cat test_help
 help
@@ -68,7 +68,7 @@ $ cat test_help | ./console.py
 Documented commands (type help <topic>):
 ========================================
 EOF  help  quit
-(hbnb) 
+(hbnb)
 $
 ```
 
@@ -77,7 +77,9 @@ $
 | command  | Explanation |
 -- | --
 | all |	Prints all string representation of all instances based or not on the class name. Ex: $ all BaseModel |
-| create | Creat```
+| create | Creates a new instance of CLASS_NAME, saves it (to the JSON file) and print the id
+| show | Prints the string representation of an instance based on the CLASS_NAME and ID
+| destroy | Deletes an instance based on the CLASS_NAME and ID (save the change into the JSON file)
 | update | Updates an instance based on the class name and id by adding or updating attribute (save the change into the JSON file). Ex: $ update BaseModel 1234-1234-1234 email "aibnb@holbertonschool.com" |
 
 ### Alternative command input ###
@@ -116,7 +118,7 @@ guillaume@ubuntu:~/AirBnB$ ./console.py
 (hbnb) destroy BaseModel 49faff9a-6318-451f-87b6-910505c55907
 (hbnb) show BaseModel 49faff9a-6318-451f-87b6-910505c55907
 ** no instance found **
-(hbnb) 
+(hbnb)
 ```
 
 ### AUTHORS: ###
